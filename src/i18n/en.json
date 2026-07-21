@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "title": "Wachirathan Waterfall — Visitor Guide to Doi Inthanon's Diamond Falls",
+    "description": "A complete visitor guide to Wachirathan Waterfall in Doi Inthanon National Park, Chiang Mai — history, how to get there, fees, best time to visit, and real traveler reviews."
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "history": "History",
+    "guide": "Guide",
+    "food": "Food",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "map": "Map"
+  },
+  "hero": {
+    "eyebrow": "Tourist Attraction · Doi Inthanon National Park",
+    "titleMain": "Wachirathan",
+    "titleAccent": " Waterfall",
+    "rating": "4.7",
+    "reviews": "10,634",
+    "category": "Tourist Attraction",
+    "badge": "Doi Inthanon National Park",
+    "cta": "Get Directions",
+    "secondaryCta": "View Photos",
+    "viewLocation": "View on Google Maps",
+    "plannerTitle": "Today's Plan",
+    "plannerNote": "Live weather at the waterfall",
+    "goldenHourLabel": "Morning golden hour",
+    "sunsetLabel": "Sunset",
+    "blueHourLabel": "Blue hour",
+    "crowdWarningLabel": "Tip",
+    "crowdAfter": "Arrive before 10:00 for fewer crowds & soft light",
+    "lightCaption": "Times computed from the waterfall's real coordinates",
+    "coordsLabel": "Wachirathan Waterfall · Doi Inthanon National Park"
+  },
+  "about": {
+    "label": "About",
+    "heading": "Wachirathan Waterfall — A Natural Jewel of Doi Inthanon",
+    "lead": "One of the most powerful and photogenic waterfalls on the road to Doi Inthanon's summit",
+    "paragraph1": "Wachirathan is a single-drop waterfall about 80 metres high, fed by the Mae Klang (Huay Mae Klang) stream, a tributary of the Ping River. It sits at kilometre 21–22 of the Chom Thong–Doi Inthanon summit road (Highway 1009) inside Doi Inthanon National Park, Chiang Mai.",
+    "paragraph2": "A short walk from the car park brings you close to the falls, with wooden bridges and viewing platforms. The misty base often throws up rainbows when the sun hits the spray, while a nature trail leads into the lush rainforest around the waterfall.",
+    "quote": "When sunlight strikes the spray, Wachirathan glitters like scattered diamonds.",
+    "quoteAuthor": "— A local saying about Wachirathan",
+    "stats": [
+      { "value": "~80 m", "label": "Height" },
+      { "value": "4.7", "label": "Rating" },
+      { "value": "06:00–17:00", "label": "Open" }
+    ],
+    "highlights": [
+      { "tag": "Nature", "title": "A single giant drop", "desc": "A ~40 m-wide curtain of water plunges ~80 m in one drop, its roar echoing through the forest" },
+      { "tag": "Photo", "title": "Rainbow mist", "desc": "Morning spray often forms rainbows — a favourite for photographers" },
+      { "tag": "Trail", "title": "Nature trails", "desc": "Shady paths through rainforest, great for birding and botany" }
+    ],
+    "editorTip": {
+      "tag": "Editor's Tip",
+      "text": "Park at the upper lot and walk down — you'll reach the closest, quietest viewpoint",
+      "ctaLabel": "See map"
+    }
+  },
+  "history": {
+    "label": "History",
+    "heading": "The Name & Story of Wachirathan",
+    "intro": "The name 'Wachirathan' comes from Pali–Sanskrit roots, hinting at the sparkling beauty of its spray",
+    "blocks": [
+      { "title": "What 'Wachirathan' means", "text": "'Vachira' (Sanskrit vajra) means diamond or thunderbolt; 'thara' means stream. Together they mean 'Diamond Stream' or 'Thunderbolt River' — likening the sparkling spray to scattered diamonds." },
+      { "title": "Former name: 'Tad Kong Yong'", "text": "Before becoming widely known as Wachirathan, locals called it 'Tad Kong Yong' (Tard Klong Yong), after the stream that feeds it from Doi Inthanon." },
+      { "title": "Part of Doi Inthanon", "text": "The area around the falls lies within Doi Inthanon National Park, established in 1972 and home to Thailand's highest peak." },
+      { "title": "From royal forest to national park", "text": "Long before it became a national park, the Doi Inthanon massif was a protected royal forest (ป่าสงวนพระเจ้า) and a favoured retreat of the Lanna court. In 1954 it was designated a forest park, and on 2 October 1972 — as Thailand's 6th national park — it was formally opened to the public under the name Doi Inthanon National Park." }
+    ],
+    "legend": {
+      "title": "Local Legend",
+      "text": "Local lore says a naga spirit dwells in the deep pool, guarding the clear water. Elders say that if you speak softly, the spray forms curious shapes they call the 'waterfall's diamonds'."
+    },
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "The falls flow all year round, fed by the Mae Klang stream from Doi Inthanon, so they never run dry even in the hot season."
+    }
+  },
+  "guide": {
+    "label": "Visitor Guide",
+    "heading": "Planning Your Visit",
+    "lead": "Everything you need to make the most of your trip to Wachirathan — safely and comfortably",
+    "hours": {
+      "tag": "Opening Hours",
+      "title": "Opening Hours",
+      "time": "06:00 – 17:00",
+      "items": [
+        { "label": "Daily (Mon–Sun)", "value": "06:00–17:00" }
+      ]
+    },
+    "fees": {
+      "tag": "Entrance Fee",
+      "title": "Park Entrance Fee",
+      "items": [
+        { "title": "Foreigners (adult)", "desc": "300 THB" },
+        { "title": "Foreigners (child)", "desc": "150 THB" },
+        { "title": "Thai nationals (adult/child)", "desc": "50 / 20 THB" }
+      ]
+    },
+    "transport": {
+      "tag": "Getting There",
+      "title": "How to Get There",
+      "items": [
+        { "title": "Car / Van", "desc": "About 70 km (1.5 hrs) from Chiang Mai city via Highway 1009" },
+        { "title": "Day tour", "desc": "Many Chiang Mai day tours include the falls with Doi Inthanon viewpoints" },
+        { "title": "Public transport", "desc": "Songthaew from Chiang Mai to Chom Thong, then onward into the park" },
+        { "title": "From the airport", "desc": "Chiang Mai International Airport (CNX) is ~80 km / ~2 hrs away. Take a taxi or pre-booked van; most visitors combine the trip with a Doi Inthanon day tour" }
+      ]
+    },
+    "safety": {
+      "title": "Safety Tips",
+      "items": [
+        { "title": "No swimming", "desc": "Swimming in the deep pool at the base of the falls is strictly prohibited — currents and submerged rocks are dangerous" },
+        { "title": "Slippery trails", "desc": "Boardwalks and steps get very slippery in the rainy season (Jun–Oct); wear proper footwear and hold the rails" },
+        { "title": "Stay on paths", "desc": "Keep to marked viewpoints and trails; the cliff edges near the falls are steep and unstable" }
+      ]
+    },
+    "nearby": {
+      "title": "Nearby Attractions",
+      "cta": "Learn more",
+      "items": [
+        { "name": "Sirithan Waterfall", "desc": "A slender 40 m fall a few km north, fed by the Mae Klang — a quiet photo stop", "url": "https://www.thailandtourismdirectory.go.th/en/attraction/3306" },
+        { "name": "Mae Ya Waterfall", "desc": "One of the park's largest falls, a multi-tier curtain of water ideal for a longer hike", "url": "https://www.thailandtourismdirectory.go.th/en/attraction/3308" },
+        { "name": "Phra Mahathat Chedi", "desc": "The twin pagodas (Naphamethinidon & Naphaphonphumisiri) near the summit, built to honour the royal family", "url": "https://www.thailandtourismdirectory.go.th/en/attraction/5149" }
+      ]
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      { "q": "Does the waterfall flow all year?", "a": "Yes — fed by the Mae Klang stream from Doi Inthanon. The rainy season (Jun–Oct) brings the most powerful and photogenic flow." },
+      { "q": "When is the best time to visit?", "a": "Rainy season for full flow; cool season (Nov–Feb) for pleasant weather and soft light. Mornings bring mist and rainbows." },
+      { "q": "Is it a long walk to the falls?", "a": "No — just a few minutes' walk from the car park to the main viewpoint, with ramps and wooden bridges." },
+      { "q": "Is there parking and facilities?", "a": "Yes — car parks, food stalls, souvenir shops and toilets are near the entrance." },
+      { "q": "Is there an entrance fee?", "a": "The falls are inside Doi Inthanon National Park, so the park entrance fee (see above) applies." }
+    ]
+  },
+  "food": {
+    "label": "Food & Drink",
+    "heading": "Food Stalls by the Falls",
+    "lead": "Stalls and small eateries at the entrance serve Northern Thai dishes and refreshing snacks",
+    "dishes": [
+      { "tag": "Grill", "name": "Grilled river fish", "price": "from 100 THB", "desc": "Freshwater fish salt-grilled with a zesty dipping sauce" },
+      { "tag": "Northern", "name": "Khao Soi", "price": "60–80 THB", "desc": "Northern curry noodle, crispy and creamy" },
+      { "tag": "Snack", "name": "Mango sticky rice", "price": "50 THB", "desc": "Warm sticky rice with coconut milk and ripe mango" },
+      { "tag": "Drink", "name": "Fresh fruit juice", "price": "40 THB", "desc": "Orange, mango or fresh young coconut" },
+      { "tag": "Souvenir", "name": "Hill produce", "price": "seasonal", "desc": "Fresh and dried produce from local hill communities" }
+    ],
+    "quote": {
+      "text": "Resting in the shade with a cold coconut while listening to the falls is simple happiness.",
+      "author": "— A regular visitor"
+    }
+  },
+  "gallery": {
+    "label": "Gallery",
+    "heading": "Scenes of Wachirathan Waterfall",
+    "intro": "Atmosphere, spray and the rainforest that frames the falls",
+    "alts": [
+      "Wachirathan Waterfall welcomes visitors",
+      "Viewpoint of Wachirathan Waterfall",
+      "Wooden bridge viewing the falls",
+      "The powerful curtain of Wachirathan",
+      "Wachirathan Waterfall name sign",
+      "The Mae Klang stream",
+      "Lush forest surrounding the falls",
+      "Visitors photographing the waterfall",
+      "Nature study trail",
+      "Wide shot of Wachirathan Waterfall",
+      "White foamy water",
+      "Wachirathan pool",
+      "Large tree by the falls",
+      "Scenery of Wachirathan Waterfall",
+      "Bridge linking viewpoints",
+      "Wachirathan in the afternoon",
+      "Forest scenery around the falls",
+      "Rainbow above Wachirathan Waterfall"
+    ],
+    "viewLocation": "View on Google Maps"
+  },
+  "reviews": {
+    "label": "Reviews",
+    "heading": "What Visitors Say",
+    "intro": "A summary of traveller feedback on Google Maps to help you plan",
+    "disclaimer": "Summarised from public Google Maps reviews; not the site's own opinion",
+    "declaration": "As a non-profit educational site, we present both highlights and cautions honestly",
+    "featured": [
+      { "text": "The falls are stunning and the roar fills the forest — and it's an easy walk in.", "source": "— Summarised from Google Maps" },
+      { "text": "Caught a rainbow in the spray — mornings are best.", "source": "— Summarised from Google Maps" }
+    ],
+    "items": [
+      { "text": "Huge and majestic, just a short walk from the car park.", "rating": 5, "name": "Somchai Y.", "date": "Mar 2026" },
+      { "text": "Came in the morning — lots of mist and spray, photos turned out great.", "rating": 5, "name": "Nina K.", "date": "Feb 2026" },
+      { "text": "The roar is so loud you can barely talk, but it's fun.", "rating": 4, "name": "Pierre L.", "date": "Jan 2026" },
+      { "text": "Slightly steep path but the wooden bridge makes it easy.", "rating": 5, "name": "Anne A.", "date": "Dec 2025" },
+      { "text": "Less water in the dry season but still beautiful, good for families.", "rating": 4, "name": "Tom B.", "date": "Nov 2025" },
+      { "text": "Roadside food was good — had a hot khao soi.", "rating": 5, "name": "Jira W.", "date": "Oct 2025" },
+      { "text": "The upper viewpoint is a great wide angle, would come back.", "rating": 5, "name": "Anna S.", "date": "Sep 2025" },
+      { "text": "Busy on holidays — come early for parking.", "rating": 4, "name": "Witthaya T.", "date": "Aug 2025" }
+    ],
+    "viewLocation": "View on Google Maps"
+  },
+  "mapSection": {
+    "label": "Location",
+    "heading": "How to Find Wachirathan",
+    "lead": "Inside Doi Inthanon National Park, about 70 km from Chiang Mai",
+    "stats": [
+      { "tag": "Province", "value": "Chiang Mai", "sub": "Thailand" },
+      { "tag": "Coordinates", "value": "18.5420, 98.5986", "sub": "18.5420° N, 98.5986° E" },
+      { "tag": "Distance", "value": "~70 km", "sub": "from Chiang Mai" }
+    ],
+    "address": "1009, Ban Luang, Chom Thong District, Chiang Mai 50160, Thailand",
+    "plusCode": "GHRX+HP",
+    "coords": "18.5420° N, 98.5986° E"
+  },
+  "footer": {
+    "brand": {
+      "name": "Wachirathan Waterfall",
+      "tagline": "A non-profit conservation & travel info station"
+    },
+    "about": "This site shares knowledge and history about Wachirathan Waterfall, with no commercial interest",
+    "navTitle": "Menu",
+    "navItems": [
+      { "label": "Home", "href": "#top" },
+      { "label": "About", "href": "#about" },
+      { "label": "History", "href": "#history" },
+      { "label": "Guide", "href": "#guide" },
+      { "label": "Food", "href": "#food" },
+      { "label": "Gallery", "href": "#gallery" },
+      { "label": "Reviews", "href": "#reviews" },
+      { "label": "Map", "href": "#map" }
+    ],
+    "noteTitle": "Note",
+    "note": "Details may change — please verify with Doi Inthanon National Park before travelling",
+    "mapsLabel": "Google Maps →",
+    "sourcesTitle": "Sources",
+    "sourcesNote": "History and facts referenced from Tourism Thailand and Doi Inthanon National Park",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "disclaimerLead": "This site is not affiliated with any government body or the waterfall's operator",
+    "unofficial": "An independent resource maintained by volunteers",
+    "dataSource": "Weather: Open-Meteo · Coordinates: 18.5420, 98.5986",
+    "copyright": "© 2026 Wachirathan Waterfall Info Station. All rights reserved."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "Last updated: July 2026",
+      "sections": [
+        { "h": "Information we collect", "p": "This site has no membership system and does not collect personal data, except what you submit via a contact form (if any)." },
+        { "h": "Cookies", "p": "We use cookies only to remember your language preference and display settings — not to track your identity." },
+        { "h": "Contact", "p": "If you have questions about your data, contact us via the channels listed on the home page." }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "updated": "Last updated: July 2026",
+      "sections": [
+        { "h": "Usage", "p": "All content is provided for educational purposes; you may share it with attribution, but not resell it." },
+        { "h": "Limitation of liability", "p": "We are not liable for any accident or loss arising from the use of information on this site." }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Settings",
+      "updated": "Last updated: July 2026",
+      "intro": "We use cookies to remember your preferences and measure usage so we can improve the site.",
+      "categories": [
+        { "h": "Essential cookies", "status": "Always on", "p": "Required for the site to work, e.g. remembering your chosen language. Cannot be disabled.", "sub": "Language & display", "subStatus": "Automatic", "active": true },
+        { "h": "Analytics cookies", "status": "Optional", "p": "Help us understand how visitors use the site so we can improve the content.", "sub": "Usage statistics", "subStatus": "Can be disabled", "active": false }
+      ],
+      "consent": "Clicking 'Save' means you accept the use of cookies as described.",
+      "save": "Save settings",
+      "rejectAll": "Reject all"
+    }
+  }
+}
