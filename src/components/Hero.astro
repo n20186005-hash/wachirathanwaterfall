@@ -49,22 +49,36 @@ const coordsLabel = hero.coordsLabel;
       <a href={mapsUrl} target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-goldBright hover:text-gold underline-offset-4 hover:underline text-sm">
         {hero.viewLocation}
       </a>
+
+      <!-- wooden park signboard + carousel dots (bottom-left) -->
+      <div class="wood-sign mt-8 inline-block max-w-md px-5 py-4">
+        <p class="wood-title text-xs font-semibold uppercase tracking-[0.18em]">{hero.boardCategory}</p>
+        <p class="wood-title mt-1 font-display text-2xl font-bold leading-tight">{hero.boardTitle}</p>
+        <p class="wood-en mt-1 text-sm font-semibold">{hero.boardEn}</p>
+      </div>
+      <div class="carousel-dots mt-4">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
     </div>
 
-    <!-- live weather + sunset planner -->
+    <!-- live weather + sunset planner (static by default; enhanced by API) -->
     <div class="lg:col-span-5">
-      <div class="rounded-2xl bg-teak/55 backdrop-blur-md border border-gold/25 p-5 text-ivory shadow-2xl">
-        <p id="weather-status" class="text-ivory/80 text-sm">{hero.loading}</p>
-        <div id="weather-body" class="hidden">
-          <div class="flex items-center justify-between">
-            <span class="text-ivory/70 text-sm">{hero.liveWeather}</span>
-            <span id="cur-icon" class="text-2xl">☀️</span>
+      <div class="weather-card rounded-2xl p-5 text-ivory shadow-2xl">
+        <div class="flex items-center justify-between">
+          <span class="text-ivory/70 text-sm">{hero.plannerTitle}</span>
+          <span id="weather-status" class="text-xs text-ivory/55">{hero.liveWeather}</span>
+        </div>
+        <div id="weather-body">
+          <div class="flex items-center justify-between mt-2">
+            <span id="cur-icon" class="text-2xl">🌦️</span>
+            <span class="text-xs text-ivory/55">{hero.plannerNote}</span>
           </div>
           <div class="mt-1 flex items-end gap-3">
-            <span id="cur-temp" class="font-display text-5xl font-semibold text-goldBright">--°</span>
+            <span id="cur-temp" class="font-display text-5xl font-semibold text-goldBright">{hero.defaultTemp}</span>
             <div class="pb-1">
-              <div id="cur-cond" class="text-sm">--</div>
-              <div class="text-xs text-ivory/60">💨 <span id="cur-wind">--</span></div>
+              <div id="cur-cond" class="text-sm">{hero.defaultCond}</div>
+              <div class="text-xs text-ivory/60">💨 <span id="cur-wind">{hero.defaultWind}</span></div>
             </div>
           </div>
 
@@ -72,10 +86,10 @@ const coordsLabel = hero.coordsLabel;
             <p class="font-hand text-gold text-lg">{hero.plannerTitle}</p>
             <p class="text-xs text-ivory/60 mt-0.5">{hero.plannerNote}</p>
             <div class="mt-3 space-y-2 text-sm">
-              <div class="flex justify-between"><span class="text-ivory/70">{hero.goldenHourLabel}</span><span id="golden-time" class="font-semibold text-goldBright">--:--</span></div>
-              <div class="flex justify-between"><span class="text-ivory/70">{hero.sunsetLabel}</span><span id="sunset-time" class="font-semibold text-goldBright">--:--</span></div>
-              <div class="flex justify-between"><span class="text-ivory/70">{hero.blueHourLabel}</span><span id="blue-time" class="font-semibold text-goldBright">--:--</span></div>
-              <div class="flex justify-between"><span class="text-ivory/70">{hero.crowdWarningLabel}</span><span class="font-semibold text-ivory">{hero.crowdAfter}</span></div>
+              <div class="flex justify-between"><span class="text-ivory/70">{hero.goldenHourLabel}</span><span id="golden-time" class="font-semibold text-goldBright">{hero.defaultGolden}</span></div>
+              <div class="flex justify-between"><span class="text-ivory/70">{hero.sunsetLabel}</span><span id="sunset-time" class="font-semibold text-goldBright">{hero.defaultSunset}</span></div>
+              <div class="flex justify-between"><span class="text-ivory/70">{hero.blueHourLabel}</span><span id="blue-time" class="font-semibold text-goldBright">{hero.defaultBlue}</span></div>
+              <div class="flex justify-between"><span class="text-ivory/70">{hero.crowdWarningLabel}</span><span class="font-semibold text-ivory">{hero.defaultTip}</span></div>
             </div>
             <p class="text-[11px] text-ivory/50 mt-2">{hero.lightCaption}</p>
           </div>
@@ -159,11 +173,12 @@ const coordsLabel = hero.coordsLabel;
         if (sEl) sEl.textContent = fmt(ss);
         if (bEl) bEl.textContent = fmt(addMin(ss, 20)) + ' – ' + fmt(addMin(ss, 50));
 
-        statusEl.classList.add('hidden');
-        bodyEl.classList.remove('hidden');
+        if (statusEl) statusEl.textContent = weatherError ? '' : '';
+        if (bodyEl) bodyEl.classList.remove('hidden');
       })
       .catch(() => {
-        statusEl.textContent = weatherError;
+        // keep static default values; do not break the card layout
+        if (bodyEl) bodyEl.classList.remove('hidden');
       });
   })();
 </script>
