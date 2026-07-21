@@ -58,6 +58,42 @@
       "ctaLabel": "See map"
     }
   },
+  "eco": {
+    "label": "Ecology",
+    "heading": "High-Mountain Rainforest & Microclimate",
+    "quote": "The endless plunge shapes not only the falls, but a thriving 'mist micro-ecosystem' in the gorge.",
+    "intro": "Wachirathan sits in a valley at about 750 m above sea level within Doi Inthanon National Park. Water from the Mae Klang stream (แม่กลาง) drops 80 m onto a granite wall; the impact shatters it into suspended mist, creating a naturally humid microclimate zone.",
+    "microTitle": "1. The Mist Microclimate Lab",
+    "micro": [
+      { "title": "Extreme humidity", "desc": "Even in the Northern dry season (Nov–Apr), relative humidity within 100 m of the falls stays above 90%." },
+      { "title": "Natural cooling", "desc": "Mist evaporation draws away heat, keeping the area 3–5°C cooler than the city below — a cool, damp local pocket." },
+      { "title": "Oxygen-rich air", "desc": "Tumbling water releases negative ions, making it Doi Inthanon's natural high-mountain 'oxygen bar'." }
+    ],
+    "plantsTitle": "2. The Vertical Plant World",
+    "plants": [
+      { "title": "Mosses & epiphytes ('hanging garden')", "desc": "Rock faces and trunks in the densest mist wear a thick emerald carpet of bryophytes.", "items": [
+        { "name": "High-mountain ferns", "desc": "Bird's-nest fern (Asplenium nidus), staghorn fern and climbing ferns draped on trunks" },
+        { "name": "Native dendrobium & orchids", "desc": "Wild orchids on old branches bloom in turn between rainy and cool seasons, feeding on the humid air" }
+      ]},
+      { "title": "Shade-loving undergrowth", "desc": "Along the boardwalk in moist humus soil grow diverse high-mountain shade plants.", "items": [
+        { "name": "Wild ginger & begonias", "desc": "Begonias (Begonia) with patterned leaves and native ginger brighten the forest floor" },
+        { "name": "Wild banana & balsam", "desc": "Banana thickets along the stream shelter small animals" }
+      ]},
+      { "title": "Evergreen broadleaf canopy", "desc": "The ridge above is cloaked in evergreen trees of Lauraceae and Fagaceae whose overlapping crowns filter harsh direct sun for the layers below." }
+    ],
+    "wildlifeTitle": "3. Highland Life on the Food Chain",
+    "wildlife": [
+      "Birdwatching haven: the crimson sunbird (Aethopyga siparaja), blue whistling thrush, white-capped redstart and kingfisher along the stream",
+      "Amphibians & insects: mossy banks are breeding grounds for mountain toads, tree frogs and rare damselflies (stream jewelwings)"
+    ],
+    "lntTitle": "4. Protection: Leave No Trace",
+    "lntIntro": "The micro-ecosystem is extremely fragile — trampled moss and epiphytes can take years to recover.",
+    "lnt": [
+      "Stay on the boardwalk and viewpoints; never step on the moss and vegetation outside the path",
+      "Do not pick wild orchids or plants — leave them whole for wildlife and later visitors",
+      "Carry out all your rubbish so nothing pollutes the high-mountain stream water"
+    ]
+  },
   "history": {
     "label": "History",
     "heading": "The Name & Story of Wachirathan",
@@ -108,12 +144,62 @@
         { "title": "From the airport", "desc": "Chiang Mai International Airport (CNX) is ~80 km / ~2 hrs away. Take a taxi or pre-booked van; most visitors combine the trip with a Doi Inthanon day tour" }
       ]
     },
+    "photography": {
+      "title": "Photography & Rainbow Guide",
+      "intro": "Plunging 80 m with an intense high-pressure mist, Wachirathan is one of the easiest places in Northern Thailand to capture a 3-D double rainbow and silky long-exposure water. Master the light angle and you'll get postcard shots.",
+      "timesTitle": "Best Light & Rainbow Windows",
+      "times": [
+        { "period": "09:30 – 11:30", "desc": "The golden rainbow window. Sunlight hits the base mist and a clear — often double — rainbow arcs over the lower viewpoint." },
+        { "period": "06:30 – 08:30", "desc": "Fewest crowds, soft light. Misty forest glow — perfect for slow-shutter silky water streaks." },
+        { "period": "After 16:00", "desc": "Sun drops behind the ridge; the falls fall into shade and the rainbow fades, but light is even for deep rainforest mood shots." }
+      ],
+      "spotsTitle": "3 Golden Spots",
+      "viewLabel": "View:",
+      "tipLabel": "Composition:",
+      "spots": [
+        { "name": "Lower main viewpoint", "view": "Head-on to the full fall — rainbows most often arch across the mist right in front of you.", "tip": "Use an ultra-wide (16–24mm); place a person at the rail as foreground for a 'human + rainbow + giant fall' frame." },
+        { "name": "Upper side wooden bridge", "view": "Avoids the heaviest mist; shows splash detail on the rock face and dense high-mountain ferns.", "tip": "Use the bridge lines as leading lines to the mid-fall; shoot vertical to stress the 80 m height." },
+        { "name": "Bottom stream & rocks", "view": "Away from crowds; mossy boulders make great foreground.", "tip": "Low angle near the water; let the stream's converging lines pull the eye, contrasting flowing water with still rock." }
+      ],
+      "settingsTitle": "Camera & Phone Settings",
+      "cameraLabel": "Camera:",
+      "phoneLabel": "Phone:",
+      "settings": [
+        { "style": "Silky water (slow shutter)", "camera": "Shutter 1/4s–2s · f/8–f/11 · ISO 100 · tripod + ND filter (ND8/ND64)", "phone": "iPhone: shoot Live Photo then choose 'Long Exposure'. Android: Pro mode, shutter 0.5s–1s." },
+        { "style": "Rainbow & splash freeze", "camera": "Shutter 1/500s–1/1000s · f/4–f/5.6 · ISO 400–800 · CPL polariser (key)", "phone": "Normal photo mode; tap the brightest part of the rainbow to focus and expose." }
+      ],
+      "tipsTitle": "Gear Care & Pitfalls",
+      "tips": [
+        "Waterproofing first: the mist is like artificial rain — you're soaked in 10 seconds at the main viewpoint.",
+        "A CPL polariser is the rainbow cheat: it kills glare on wet rocks, boosts green saturation, and strengthens rainbow contrast.",
+        "Three-step shoot: set up away from the mist; cap the lens and walk in; wipe the glass, compose, fire, then retreat under cover.",
+        "Bring 3–4 microfibre cloths (one gets soaked fast), a rain cover for the camera, and an absorbent towel."
+      ]
+    },
+    "bestTime": {
+      "title": "Best Season & Flowering",
+      "intro": "At about 750 m above sea level, Doi Inthanon is cooler than the plains. Water volume and scenery shift through the year — plan by season for a smoother trip.",
+      "seasons": [
+        { "tag": "Cool season", "months": "Nov – Feb", "name": "Steady flow · Best morning mist", "desc": "Groundwater stored from the rains keeps the fall flowing year-round; cool-season water is steady and clear. Mornings often wear a thin veil of mist and the temperature is pleasant (~15–25°C) — the most comfortable season for families and seniors." },
+        { "tag": "Hot season", "months": "Mar – May", "name": "Slightly less water · Shady & cool", "desc": "Flow eases a little from the cool season but stays impressive; midday is hot, so go early or late. The altitude's shade and mountain breeze feel cooler than the plains." },
+        { "tag": "Rainy season", "months": "Jun – Oct", "name": "Max flow · Mind the slip", "desc": "Heavy rain makes the falls most powerful and the mist thickest, with frequent rainbows. But trails get slippery and hillsides may shed rocks — wear grippy shoes and watch the weather alerts." }
+      ]
+    },
     "safety": {
       "title": "Safety Tips",
       "items": [
         { "title": "No swimming", "desc": "Swimming in the deep pool at the base of the falls is strictly prohibited — currents and submerged rocks are dangerous" },
         { "title": "Slippery trails", "desc": "Boardwalks and steps get very slippery in the rainy season (Jun–Oct); wear proper footwear and hold the rails" },
         { "title": "Stay on paths", "desc": "Keep to marked viewpoints and trails; the cliff edges near the falls are steep and unstable" }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility & Senior Tips",
+      "intro": "Wachirathan is fairly friendly for families and seniors: the walk from the car park to the main viewpoint is short and gently graded, with well-built boardwalks and rails.",
+      "items": [
+        { "title": "Gentle boardwalk", "desc": "The boardwalk from the car park is nearly flat, with continuous handrails along the way — wheelchairs and strollers can reach the lower viewpoint." },
+        { "title": "Close to the falls", "desc": "Just a few minutes' walk from the car park brings you to the main viewpoint, so no long trek is needed — easy even for seniors." },
+        { "title": "Facilities", "desc": "Car park, toilets and food stalls are near the entrance. Avoid the midday peak in high season; early morning or late afternoon is more relaxed." }
       ]
     },
     "nearby": {
@@ -240,6 +326,23 @@
     "unofficial": "An independent resource maintained by volunteers",
     "dataSource": "Weather: Open-Meteo · Coordinates: 18.5420, 98.5986",
     "copyright": "© 2026 Wachirathan Waterfall Info Station. All rights reserved."
+  },
+  "sources": {
+    "label": "Sources",
+    "heading": "Sources & Photo Licensing",
+    "intro": "This is a non-profit educational site. Content is compiled from public sources and photos are used under Creative Commons (CC) licences. Copyright remains with the original authors; please let us know of any omission or error.",
+    "photoTitle": "Photo licensing",
+    "photoItems": [
+      { "text": "Gallery photos are used under CC BY / CC BY-SA and other Creative Commons licences.", "url": "https://creativecommons.org/licenses/", "linkLabel": "About CC licences" },
+      { "text": "Photo sources include the Tourism Authority of Thailand (TAT) public image library and openly licensed visitor submissions." }
+    ],
+    "factTitle": "Data & facts",
+    "factText": "Attraction and history information is referenced from the Tourism Authority of Thailand (TAT) and Doi Inthanon National Park; weather and daylight data come from the free Open-Meteo API.",
+    "correctionTitle": "Found a mistake? Tell us",
+    "correctionText": "We do our best to keep information accurate, but fees and opening hours can change. If you spot any error, please write to us so we can correct it and help every visitor.",
+    "correctionCta": "Email a correction",
+    "correctionMailto": "mailto:n20186005@gmail.com?subject=Wachirathan%20Waterfall%20correction",
+    "copyright": "Wachirathan Waterfall Info Station"
   },
   "legal": {
     "privacy": {

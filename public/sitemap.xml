@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://wachirathanwaterfall.com/th/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://wachirathanwaterfall.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wachirathanwaterfall.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wachirathanwaterfall.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wachirathanwaterfall.com/th/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://wachirathanwaterfall.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wachirathanwaterfall.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wachirathanwaterfall.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wachirathanwaterfall.com/th/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://wachirathanwaterfall.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wachirathanwaterfall.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wachirathanwaterfall.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wachirathanwaterfall.com/th/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/th/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/en/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/zh/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/th/terms-of-service/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/en/terms-of-service/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/zh/terms-of-service/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/th/cookie-settings/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/en/cookie-settings/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wachirathanwaterfall.com/zh/cookie-settings/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

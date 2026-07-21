@@ -74,6 +74,80 @@ const guideImgs = [
       </div>
     </div>
 
+    <!-- Photography & rainbow guide -->
+    {guide.photography && (
+      <div class="mt-14 max-w-4xl">
+        <h3 class="font-display text-2xl text-teak mb-2">{guide.photography.title}</h3>
+        <p class="text-sm text-ink/75 mb-5">{guide.photography.intro}</p>
+
+        <!-- Best light / rainbow windows -->
+        <h4 class="font-display text-lg text-gold mb-3">{guide.photography.timesTitle}</h4>
+        <div class="grid sm:grid-cols-3 gap-3 mb-6">
+          {guide.photography.times.map((t) => (
+            <div class="rounded-xl border border-gold/25 bg-white/50 p-4">
+              <div class="font-semibold text-teak">{t.period}</div>
+              <p class="mt-1 text-sm text-ink/70">{t.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Photo spots -->
+        <h4 class="font-display text-lg text-gold mb-3">{guide.photography.spotsTitle}</h4>
+        <div class="space-y-3 mb-6">
+          {guide.photography.spots.map((s) => (
+            <div class="rounded-xl border border-gold/25 bg-white/50 p-4">
+              <div class="font-semibold text-teak">{s.name}</div>
+              <p class="mt-1 text-sm text-ink/70"><span class="font-medium">{guide.photography.viewLabel}</span> {s.view}</p>
+              <p class="mt-1 text-sm text-ink/70"><span class="font-medium">{guide.photography.tipLabel}</span> {s.tip}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Camera & phone settings -->
+        <h4 class="font-display text-lg text-gold mb-3">{guide.photography.settingsTitle}</h4>
+        <div class="space-y-3 mb-6">
+          {guide.photography.settings.map((st) => (
+            <div class="rounded-xl border border-gold/25 bg-white/50 p-4">
+              <div class="font-semibold text-teak">{st.style}</div>
+              <p class="mt-1 text-sm text-ink/70"><span class="font-medium">{guide.photography.cameraLabel}</span> {st.camera}</p>
+              <p class="mt-1 text-sm text-ink/70"><span class="font-medium">{guide.photography.phoneLabel}</span> {st.phone}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Tips -->
+        <h4 class="font-display text-lg text-gold mb-3">{guide.photography.tipsTitle}</h4>
+        <ul class="space-y-2 text-sm text-ink/75">
+          {guide.photography.tips.map((tp) => (
+            <li class="flex gap-2">
+              <span class="text-gold mt-0.5" aria-hidden="true">•</span>
+              <span>{tp}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- Best time to visit / flowering -->
+    {guide.bestTime && (
+      <div class="mt-14 max-w-4xl">
+        <h3 class="font-display text-2xl text-teak mb-2">{guide.bestTime.title}</h3>
+        <p class="text-sm text-ink/75 mb-5">{guide.bestTime.intro}</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {guide.bestTime.seasons.map((sn) => (
+            <div class="rounded-2xl border border-gold/25 bg-white/50 p-5">
+              <div class="flex items-center justify-between">
+                <span class="font-display text-gold text-xl">{sn.tag}</span>
+                <span class="text-xs text-teak font-medium bg-gold/15 px-2 py-1 rounded-full">{sn.months}</span>
+              </div>
+              <h4 class="font-display text-teak font-semibold text-lg mt-2">{sn.name}</h4>
+              <p class="mt-1 text-sm text-ink/75">{sn.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
     <!-- Safety -->
     {guide.safety && (
       <div class="mt-14 rounded-2xl border border-amber-300 bg-amber-50 p-6 max-w-4xl shadow-sm">
@@ -84,6 +158,24 @@ const guideImgs = [
           {guide.safety.items.map((it) => (
             <li class="flex gap-2">
               <span class="text-amber-600 mt-0.5" aria-hidden="true">•</span>
+              <span><span class="font-semibold">{it.title}</span> — {it.desc}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- Accessibility / Senior-friendly -->
+    {guide.accessibility && (
+      <div class="mt-14 rounded-2xl border border-teal-300 bg-teal-50 p-6 max-w-4xl shadow-sm">
+        <h3 class="font-display text-xl text-teal-800 flex items-center gap-2">
+          <span aria-hidden="true">♿</span> {guide.accessibility.title}
+        </h3>
+        <p class="mt-2 text-sm text-teal-900/85 leading-relaxed">{guide.accessibility.intro}</p>
+        <ul class="mt-3 space-y-2 text-sm text-teal-900/85">
+          {guide.accessibility.items.map((it) => (
+            <li class="flex gap-2">
+              <span class="text-teal-600 mt-0.5" aria-hidden="true">✓</span>
               <span><span class="font-semibold">{it.title}</span> — {it.desc}</span>
             </li>
           ))}
