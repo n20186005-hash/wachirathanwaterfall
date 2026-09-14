@@ -7,8 +7,11 @@
     "home": "Home",
     "about": "About",
     "history": "History",
+    "weather": "Weather",
     "guide": "Guide",
     "food": "Food",
+    "facilities": "Facilities",
+    "routes": "Routes",
     "gallery": "Gallery",
     "reviews": "Reviews",
     "map": "Map"
@@ -19,8 +22,9 @@
     "titleAccent": " Waterfall",
     "subtitle": "A natural waterfall icon inside Doi Inthanon National Park — about 80 m tall, with drifting mist and frequent rainbows.",
     "rating": "4.7",
-    "reviews": "10,634",
-    "reviewCount": "10,634",
+    "reviews": "10,776",
+    "reviewCount": "10,776",
+    "reviewSourceLine": "Ratings and review counts synced from Google Maps user reviews · September 2026 · Click to view all reviews on Google Maps↗",
     "category": "Tourist Attraction",
     "badge": "Doi Inthanon National Park",
     "cta1": "Get Directions",
@@ -128,7 +132,13 @@
     "didYouKnow": {
       "title": "Did you know?",
       "text": "The falls flow all year round, fed by the Mae Klang stream from Doi Inthanon, so they never run dry even in the hot season."
-    }
+    },
+    "storiesTitle": "Stories & Legends",
+    "stories": [
+      { "title": "Named after the Thunderbolt", "text": "Legend says that Lanna-era monks passing through heard the falls roar like a vajra (thunderbolt) striking stone on stormy nights, with spray scattering like diamonds — so they named it after the Sanskrit word “Vajra”, believing the place was guarded by divine power." },
+      { "title": "The Naga's Deep Pool", "text": "Villagers believed a Naga serpent spirit guarded the deep pool at the base of the falls. When the rainy season swelled the water, elders would warn children not to play in the pool, out of respect for the water spirit." },
+      { "title": "A Royal Summer Retreat", "text": "In the Lanna kingdom era, Doi Inthanon was a favoured summer retreat of the royal court. The forest around the falls was formally designated a protected forest in 1954, laying the groundwork for the national park established in 1972." }
+    ]
   },
   "guide": {
     "label": "Visitor Guide",
@@ -285,6 +295,9 @@
     "intro": "A summary of traveller feedback on Google Maps to help you plan",
     "disclaimer": "Summarised from public Google Maps reviews; not the site's own opinion",
     "declaration": "As a non-profit educational site, we present both highlights and cautions honestly",
+    "sourceNote": "Synced from Google Maps user reviews · Synced September 2026 · Copyright © original authors and Google Maps",
+    "viewAllCta": "View all reviews on Google Maps",
+    "sourceAttributionLink": "https://maps.app.goo.gl/QERbeU7GTZCtzj1bA",
     "featured": [
       { "text": "The falls are stunning and the roar fills the forest — and it's an easy walk in.", "source": "— Summarised from Google Maps" },
       { "text": "Caught a rainbow in the spray — mornings are best.", "source": "— Summarised from Google Maps" }
@@ -300,6 +313,191 @@
       { "text": "Busy on holidays — come early for parking.", "rating": 4, "name": "Witthaya T.", "date": "Aug 2025" }
     ],
     "viewLocation": "View on Google Maps"
+  },
+  "weather": {
+    "label": "Live Weather",
+    "heading": "Current Weather & 7-Day Forecast",
+    "lead": "The valley microclimate at the falls often differs from the city below. Check the live conditions before you go — whether to bring an umbrella, and how warm to dress, all in one view.",
+    "now": "At the falls",
+    "live": "Live",
+    "feels": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "rainToday": "Rain chance today",
+    "umbrellaYes": "High chance of rain — bring an umbrella or raincoat and wear non-slip shoes",
+    "umbrellaMaybe": "Possible showers — pack a light rain jacket just in case",
+    "umbrellaNo": "Low chance of rain — travel light; still consider non-slip shoes for the mist zone",
+    "week": "Next 7 days",
+    "today": "Today",
+    "note": "Forecast is based on the valley microclimate at the falls' real coordinates and updates automatically each day.",
+    "codes": {
+      "0": "Clear",
+      "1": "Mostly clear",
+      "2": "Partly cloudy",
+      "3": "Overcast",
+      "45": "Fog",
+      "48": "Rime fog",
+      "51": "Light drizzle",
+      "53": "Drizzle",
+      "55": "Dense drizzle",
+      "61": "Light rain",
+      "63": "Rain",
+      "65": "Heavy rain",
+      "80": "Slight showers",
+      "81": "Showers",
+      "82": "Violent showers",
+      "95": "Thunderstorm",
+      "96": "Thunderstorm with hail",
+      "99": "Thunderstorm with hail",
+      "_": "Cloudy"
+    },
+    "unavailable": "Weather data is temporarily unavailable — please refresh and try again."
+  },
+  "facilities": {
+    "label": "Visitor Services",
+    "heading": "Facilities & Nearby Services",
+    "lead": "An overview of the types of services commonly found at the falls and nearby, so you can plan with confidence. We do not recommend specific businesses; actual availability may vary on site.",
+    "items": [
+      { "tag": "🚻", "title": "Restrooms", "desc": "Public restrooms are located near the entrance and parking areas; some are Thai-style squat toilets — bring your own tissue and hand sanitiser." },
+      { "tag": "🅿️", "title": "Parking", "desc": "Two large parking areas (upper and lower) sit close to the viewing trail entrances; they fill up on holiday afternoons, so arrive in the morning." },
+      { "tag": "🍜", "title": "Food & Drink", "desc": "Local snack stalls and simple food stands operate near the parking area in high season, serving affordable northern Thai favourites; bringing your own snacks also works." },
+      { "tag": "🛏️", "title": "Accommodation", "desc": "There is no lodging at the falls themselves. Chom Thong town and the Doi Inthanon road offer a range of stays, from family guesthouses to resorts." },
+      { "tag": "🏪", "title": "Shops & Supplies", "desc": "A small kiosk at the falls sells drinks and snacks; do your main shopping in Chiang Mai city or Chom Thong town beforehand." },
+      { "tag": "⛽", "title": "Fuel & Charging", "desc": "The mountain road adds up quickly — refuel in town before heading up. EV drivers should plan charging stops ahead, as charging points inside the park are limited." },
+      { "tag": "🩹", "title": "Medical & Emergency", "desc": "The national park visitor centre can assist with basic needs; serious cases require the Chom Thong hospital. Mobile signal can be patchy in the mountains — stay alert." },
+      { "tag": "📶", "title": "Connectivity", "desc": "Signal is good at the main viewing areas but may weaken deeper on the trails. Download offline maps for navigation." }
+    ],
+    "note": "As a non-profit educational site, this overview describes facility types only and is not affiliated with any business."
+  },
+  "seasonal": {
+    "label": "Seasonal Strategy",
+    "heading": "Season-by-Season Visit Strategy",
+    "lead": "A combined analysis of weather, water levels and wildlife activity — compiled from 30-year climate normals published by the Thai Meteorological Department (TMD).",
+    "cols": {
+      "season": "Season",
+      "months": "Months",
+      "weather": "Weather",
+      "water": "Water & clarity",
+      "wildlife": "Ecology & wildlife",
+      "tip": "Visit tip"
+    },
+    "rows": [
+      { "season": "Rainy", "months": "Jun – Oct", "weather": "Afternoon showers, humid air, mist rolling over the hills", "water": "Peak volume — the falls at their most thunderous; water slightly turbid", "wildlife": "Amphibians and insects at their most active; orchids in bloom", "tip": "The most dramatic views — bring rain gear; red-dirt paths are slippery" },
+      { "season": "Cool", "months": "Nov – Feb", "weather": "Sunny and dry, cool mornings (can dip to ~10°C in the hills)", "water": "Steady, clear flows with a high chance of mist rainbows", "wildlife": "Migratory and montane birds active — prime birding season", "tip": "The best time to visit; crowds build, so arrive before 10 am" },
+      { "season": "Hot", "months": "Mar – May", "weather": "Hot and dry, strong midday UV", "water": "Flows recede but never dry up; water runs clear and shallow", "wildlife": "Wildlife active at dawn and dusk to avoid the heat", "tip": "Go early; midday heat is intense — hydrate and use sun protection" }
+    ],
+    "monthTitle": "Month-by-month quick guide",
+    "months": [
+      { "m": "Jan", "c": "Cool · sunny & fresh", "t": "Peak month — busy, arrive early" },
+      { "m": "Feb", "c": "Cool · warming", "t": "Blooming season, solid water volume" },
+      { "m": "Mar", "c": "Hot · dry", "t": "Go early, afternoons are hot" },
+      { "m": "Apr", "c": "Hot · hottest", "t": "Songkran crowds; lower flows" },
+      { "m": "May", "c": "Hot → rainy", "t": "Showers begin, volume recovering" },
+      { "m": "Jun", "c": "Rainy · early", "t": "Flow building, greenest scenery" },
+      { "m": "Jul", "c": "Rainy · peak flow", "t": "Most dramatic, often misty" },
+      { "m": "Aug", "c": "Rainy · peak flow", "t": "Highest volume — bring rain gear" },
+      { "m": "Sep", "c": "Rainy · peak flow", "t": "Thunderous falls; slippery paths" },
+      { "m": "Oct", "c": "Rainy → cool", "t": "Still full; visitors increasing" },
+      { "m": "Nov", "c": "Cool · begins", "t": "Golden season; birding at its best" },
+      { "m": "Dec", "c": "Cool · crisp", "t": "High sunshine odds; frequent rainbows" }
+    ]
+  },
+  "plans": {
+    "label": "Tailored Plans",
+    "heading": "Visit Plans by Traveller Type",
+    "lead": "Three targeted routes: families with kids / photography & nature / low-mobility accessible. Pick the one that matches your group and follow it directly.",
+    "groups": [
+      {
+        "tag": "👨‍👩‍👧",
+        "title": "Family with Kids",
+        "desc": "Relaxed pace, safety first, shortest walking distances, with fun nature learning.",
+        "schedule": [
+          "08:30 Arrive at the lower car park; start with photos from the viewing deck",
+          "09:00 Walk the wooden bridge to the base of the falls (about 20 min return)",
+          "10:00 Read the interpretive signs at the nature-trail entrance — mosses and ferns",
+          "11:00 Simple lunch at the stalls by the car park"
+        ],
+        "tips": ["Pack a change of clothes for kids — the mist zone soaks everything", "Guardrails line the whole route, but keep children from climbing over"]
+      },
+      {
+        "tag": "📷",
+        "title": "Photography & Nature",
+        "desc": "Chasing light — rainbows, long exposures and macro nature windows.",
+        "schedule": [
+          "06:40 Arrive at golden hour; shoot light shafts piercing the mist at low angles",
+          "08:30 Front-lit panorama of the main falls; try 1/4s silk-water long exposures",
+          "10:00 Macro walk on the nature trail — mosses, ferns and wild orchids",
+          "16:30 Return for side-lit evening shots and reflections at the base"
+        ],
+        "tips": ["Keep a lens cloth ready — mist coats the glass in 3 minutes", "Yield to pedestrians when tripod-mounted on the bridge"]
+      },
+      {
+        "tag": "♿",
+        "title": "Low-Mobility / Accessible",
+        "desc": "Shortest walking, fewest steps — comfortable for visitors with limited mobility and their companions.",
+        "schedule": [
+          "09:00 Park at the upper car park — only a few steps from the viewing deck",
+          "09:15 Enjoy the full panorama from the railed viewing deck; gentle slopes only",
+          "10:00 Rest and take photos at the seating area beside the deck; return anytime",
+          "10:30 If energy allows, descend to the wooden bridge (steps involved — optional)"
+        ],
+        "tips": ["The upper-car-park route is essentially step-free; wheelchairs can reach the viewing deck", "Restrooms are next to the car park with a short, flat path"]
+      }
+    ]
+  },
+  "itinerary": {
+    "label": "Suggested Routes",
+    "heading": "Recommended Itineraries",
+    "lead": "Two ready-made routes — half-day and full-day — that work on their own or chained with other Doi Inthanon sights.",
+    "routes": [
+      {
+        "tag": "Half-day",
+        "title": "Classic Half-Day (about 3.5 hours)",
+        "steps": [
+          "08:30 Arrive at the upper car park; first shots from the viewing deck",
+          "09:00 Wooden bridge to the base of the falls — mist and rainbows up close",
+          "10:00 Loop the nature education trail and learn the rainforest plants",
+          "11:00 Simple lunch at the stalls, then head back or onward"
+        ]
+      },
+      {
+        "tag": "Full-day",
+        "title": "Deep-Dive Full Day (about 7 hours)",
+        "steps": [
+          "07:00 Early arrival; golden-hour light on the main falls",
+          "08:30 Full nature education trail — birding and macro photography",
+          "11:00 Lunch and rest at the car park area",
+          "13:00 Drive to Sirithan Waterfall (about 10 minutes away)",
+          "15:00 Continue up to the summit and the twin chedis",
+          "17:00 Watch the sea of clouds from the top, then descend"
+        ]
+      }
+    ]
+  },
+  "conservation": {
+    "label": "Science & Stewardship",
+    "heading": "Conservation & Visitor Responsibility",
+    "lead": "Wachirathan's ecology rests on a fragile, mist-fed microclimate. Understanding it is the first step to protecting it.",
+    "points": [
+      { "tag": "💧", "title": "Mist is Life", "desc": "Humidity within 100 m of the base stays above 90% all year; mosses and epiphytes depend on it and take years to recover once trampled." },
+      { "tag": "🐟", "title": "The Stream Food Chain", "desc": "The Mae Klang stream flows from the falls to villages downstream — water quality directly affects farms and aquatic life, and pollution travels down the chain." },
+      { "tag": "🐦", "title": "Home of Montane Birds", "desc": "Sunbirds, thrushes and kingfishers breed here. Keep your distance when birding — no flash, no playback calls." },
+      { "tag": "🌡️", "title": "Natural Air-Conditioning", "desc": "Mist evaporation keeps the area 3–5°C cooler than the city. This cooling depends on intact vegetation — litter and trampling weaken it." }
+    ],
+    "dosTitle": "Please do",
+    "dos": [
+      "Stay on the boardwalks and designated platforms",
+      "Carry your rubbish out — leave no trace",
+      "Keep your voice down; do not disturb wildlife",
+      "Follow park rules; on-site notices prevail if anything changes"
+    ],
+    "dontsTitle": "Please don't",
+    "donts": [
+      "Climb over railings into the mist zone",
+      "Pick orchids or trample mosses for photos",
+      "Feed wild animals",
+      "Use detergent in the stream or leave food scraps"
+    ]
   },
   "mapSection": {
     "label": "Location",
@@ -341,7 +539,7 @@
     "cookies": "Cookies",
     "disclaimerLead": "This site is not affiliated with any government body or the waterfall's operator",
     "unofficial": "An independent resource maintained by volunteers",
-    "dataSource": "Weather: Open-Meteo · Coordinates: 18.5420, 98.5986",
+    "dataSource": "Weather data: public meteorological services · Coordinates: 18.5420, 98.5986",
     "copyright": "© 2026 Wachirathan Waterfall Info Station. All rights reserved."
   },
   "sources": {
@@ -351,10 +549,25 @@
     "photoTitle": "Photo licensing",
     "photoItems": [
       { "text": "Gallery photos are used under CC BY / CC BY-SA and other Creative Commons licences.", "url": "https://creativecommons.org/licenses/", "linkLabel": "About CC licences" },
-      { "text": "Photo sources include the Tourism Authority of Thailand (TAT) public image library and openly licensed visitor submissions." }
+      { "text": "Photo sources include the Tourism Authority of Thailand (TAT) public image library and openly licensed visitor submissions." },
+      { "text": "All images displayed on this website remain the property and copyright of their original photographers." }
     ],
+    "reviewTitle": "Review source",
+    "reviewIntro": "All visitor ratings, review counts and featured quotes on this page are",
+    "reviewSourceLabel": "Synced from Google Maps user reviews · Synced September 2026",
+    "reviewCopyright": "Copyright © original authors and Google Maps",
+    "reviewLinkLabel": "View all reviews on Google Maps",
+    "reviewLinkUrl": "https://maps.app.goo.gl/QERbeU7GTZCtzj1bA",
+    "reviewSyncedAt": "September 2026",
     "factTitle": "Data & facts",
-    "factText": "Attraction and history information is referenced from the Tourism Authority of Thailand (TAT) and Doi Inthanon National Park; weather and daylight data come from the free Open-Meteo API.",
+    "factText": "Attraction and history information is referenced from the Tourism Authority of Thailand (TAT) and Doi Inthanon National Park; weather and daylight data come from public meteorological data services.",
+    "officialTitle": "Authoritative official sources",
+    "officialNote": "For the latest fees, opening hours and park notices, please refer to these official channels:",
+    "officialItems": [
+      { "label": "Tourism Authority of Thailand (TAT)", "url": "https://www.tourismthailand.org/" },
+      { "label": "Doi Inthanon NP · Thailand Tourism Directory", "url": "https://www.thailandtourismdirectory.go.th/en/attraction/3304" },
+      { "label": "Department of National Parks (DNP)", "url": "https://www.dnp.go.th/" }
+    ],
     "correctionTitle": "Found a mistake? Tell us",
     "correctionText": "We do our best to keep information accurate, but fees and opening hours can change. If you spot any error, please write to us so we can correct it and help every visitor.",
     "correctionCta": "Email a correction",

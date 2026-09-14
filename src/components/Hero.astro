@@ -46,6 +46,11 @@ const coordsLabel = hero.coordsLabel;
         <span>{coordsLabel}</span>
       </div>
 
+      <!-- 评价来源说明：评分与评价数同步自谷歌地图 -->
+      <p class="mt-3 text-[11px] text-ivory/65 max-w-xl leading-relaxed">
+        {hero.reviewSourceLine}
+      </p>
+
       <a href={mapsUrl} target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-goldBright hover:text-gold underline-offset-4 hover:underline text-sm">
         {hero.viewLocation}
       </a>

@@ -1,0 +1,50 @@
+---
+interface Props {
+  messages: Record<string, any>;
+}
+const { messages } = Astro.props;
+const c = messages.conservation;
+---
+
+<section id="conservation" class="py-20 bg-teakDeep text-ivory">
+  <div class="max-w-7xl mx-auto px-5">
+    <p class="font-hand text-gold text-xl md:text-2xl">{c.label}</p>
+    <h2 class="font-display font-semibold text-3xl md:text-5xl text-ivory mt-2">{c.heading}</h2>
+    <p class="mt-4 max-w-3xl text-ivory/80">{c.lead}</p>
+
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {c.points.map((p: any) => (
+        <div class="rounded-2xl bg-teak/60 border border-gold/20 p-5">
+          <div class="text-3xl" aria-hidden="true">{p.tag}</div>
+          <h3 class="font-display text-lg text-goldBright mt-3">{p.title}</h3>
+          <p class="mt-2 text-sm text-ivory/75 leading-relaxed">{p.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-teal-400/40 bg-teal-900/20 p-6">
+        <h3 class="font-display text-xl text-teal-300">{c.dosTitle}</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-ivory/85">
+          {c.dos.map((it: any) => (
+            <li class="flex gap-2.5">
+              <span class="text-teal-400 mt-0.5" aria-hidden="true">✓</span>
+              <span>{it}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-red-400/40 bg-red-900/20 p-6">
+        <h3 class="font-display text-xl text-red-300">{c.dontsTitle}</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-ivory/85">
+          {c.donts.map((it: any) => (
+            <li class="flex gap-2.5">
+              <span class="text-red-400 mt-0.5" aria-hidden="true">✕</span>
+              <span>{it}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

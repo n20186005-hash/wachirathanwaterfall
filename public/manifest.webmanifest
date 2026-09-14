@@ -1,0 +1,45 @@
+{
+  "name": "Wachirathan Waterfall - Visitor Guide",
+  "short_name": "Wachirathan",
+  "description": "Comprehensive visitor guide to Wachirathan Waterfall, Doi Inthanon National Park, Chiang Mai, Thailand.",
+  "start_url": "/th/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#071a1c",
+  "theme_color": "#0d2a2e",
+  "lang": "th",
+  "dir": "ltr",
+  "categories": ["travel", "education"],
+  "icons": [
+    {
+      "src": "/gallery/wachirathan-waterfall-1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/gallery/wachirathan-waterfall-2.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About",
+      "url": "/th/#about",
+      "description": "About Wachirathan Waterfall"
+    },
+    {
+      "name": "Reviews",
+      "url": "/th/#reviews",
+      "description": "Visitor reviews from Google Maps"
+    },
+    {
+      "name": "Map",
+      "url": "/th/#map",
+      "description": "Open location on Google Maps"
+    }
+  ]
+}

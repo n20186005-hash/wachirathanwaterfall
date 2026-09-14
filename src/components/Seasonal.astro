@@ -1,0 +1,57 @@
+---
+interface Props {
+  messages: Record<string, any>;
+}
+const { messages } = Astro.props;
+const seasonal = messages.seasonal;
+---
+
+<section id="seasonal" class="py-20 bg-teak text-ivory">
+  <div class="max-w-7xl mx-auto px-5">
+    <p class="font-hand text-gold text-xl md:text-2xl">{seasonal.label}</p>
+    <h2 class="font-display font-semibold text-3xl md:text-5xl text-ivory mt-2">{seasonal.heading}</h2>
+    <p class="mt-4 max-w-3xl text-ivory/80">{seasonal.lead}</p>
+
+    <!-- 三季综合策略表 -->
+    <div class="mt-10 overflow-x-auto">
+      <table class="w-full min-w-[860px] text-sm border-separate border-spacing-0">
+        <thead>
+          <tr class="text-left">
+            {[seasonal.cols.season, seasonal.cols.months, seasonal.cols.weather, seasonal.cols.water, seasonal.cols.wildlife, seasonal.cols.tip].map((h: any) => (
+              <th class="font-display text-goldBright border-b border-gold/30 pb-3 pr-4 align-bottom">{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {seasonal.rows.map((r: any, i: number) => (
+            <tr class={i % 2 === 0 ? 'bg-teakDeep/40' : 'bg-teakDeep/20'}>
+              <td class="font-display text-ivory font-semibold border-b border-gold/15 py-4 pr-4 align-top">
+                {r.season}
+                <div class="text-xs text-gold mt-1">{r.months}</div>
+              </td>
+              <td class="text-ivory/60 border-b border-gold/15 py-4 pr-4 align-top">{r.months}</td>
+              <td class="text-ivory/80 border-b border-gold/15 py-4 pr-4 align-top leading-relaxed">{r.weather}</td>
+              <td class="text-ivory/80 border-b border-gold/15 py-4 pr-4 align-top leading-relaxed">{r.water}</td>
+              <td class="text-ivory/80 border-b border-gold/15 py-4 pr-4 align-top leading-relaxed">{r.wildlife}</td>
+              <td class="text-gold border-b border-gold/15 py-4 align-top leading-relaxed">{r.tip}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 逐月速查 -->
+    <h3 class="font-display text-2xl text-goldBright mt-14">{seasonal.monthTitle}</h3>
+    <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      {seasonal.months.map((m: any, i: number) => (
+        <div class={`rounded-xl border p-4 ${i % 3 === 0 ? 'border-gold/30' : 'border-gold/20'} bg-teakDeep/40`}>
+          <div class="flex items-baseline justify-between gap-2">
+            <span class="font-display text-teak font-semibold text-lg text-goldBright">{m.m}</span>
+            <span class="text-[11px] text-ivory/60 text-right">{m.c}</span>
+          </div>
+          <p class="mt-2 text-xs text-ivory/75 leading-relaxed">{m.t}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

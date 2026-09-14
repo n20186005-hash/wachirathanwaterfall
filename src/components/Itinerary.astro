@@ -1,0 +1,36 @@
+---
+interface Props {
+  messages: Record<string, any>;
+}
+const { messages } = Astro.props;
+const itinerary = messages.itinerary;
+---
+
+<section id="itinerary" class="py-20 bg-sand text-ink">
+  <div class="max-w-7xl mx-auto px-5">
+    <p class="font-hand text-gold text-xl md:text-2xl">{itinerary.label}</p>
+    <h2 class="font-display font-semibold text-3xl md:text-5xl text-teak mt-2">{itinerary.heading}</h2>
+    <p class="mt-4 max-w-3xl text-ink/80">{itinerary.lead}</p>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      {itinerary.routes.map((r: any) => (
+        <div class="rounded-2xl border border-gold/30 bg-white/60 p-7 relative overflow-hidden">
+          <span class="absolute top-6 right-6 chip border-gold/40 text-teak bg-gold/10">{r.tag}</span>
+          <h3 class="font-display text-xl text-teak pr-20">{r.title}</h3>
+
+          <div class="mt-6 relative">
+            <div class="absolute left-[7px] top-2 bottom-2 w-px bg-gold/30" aria-hidden="true"></div>
+            <ol class="space-y-4">
+              {r.steps.map((s: any) => (
+                <li class="relative pl-8">
+                  <span class="absolute left-0 top-1 w-[15px] h-[15px] rounded-full bg-gold border-2 border-teak" aria-hidden="true"></span>
+                  <span class="text-sm text-ink/85 leading-relaxed">{s}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

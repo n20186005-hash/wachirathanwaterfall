@@ -10,32 +10,55 @@ interface Props {
   messages: Record<string, any>;
 }
 const { lang, title, description, messages } = Astro.props;
-const canonical = `${siteConfig.domain}/${lang}/`;
+const canonical = `${siteConfig.siteUrl}/${lang}/`;
+const heroImage = `${siteConfig.siteUrl}/gallery/${siteConfig.galleryPrefix}1.jpg`;
 
 const faqs = (messages && messages.guide && messages.guide.faqs) ? messages.guide.faqs : [];
 
-const jsonLd = [
+// 单景点 SEO 实体绑定的 JSON-LD（TouristAttraction + FAQPage）
+const attractionId = `${siteConfig.siteUrl}/#attraction`;
+
+const jsonLd: any[] = [
   {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
-    name: siteConfig.name[lang],
-    description,
-    image: `${siteConfig.domain}/gallery/wachirathan-waterfall-1.jpg`,
-    url: canonical,
+    '@id': attractionId,
+    name: siteConfig.attractionFullName,
+    alternateName: [
+      siteConfig.attractionShortName,
+      `${siteConfig.attractionFullName} ${siteConfig.cityName}`,
+      `${siteConfig.attractionFullName} Chiang Mai`,
+      'น้ำตกวชิรธาร',
+    ],
+    description: `Comprehensive visitor guide to ${siteConfig.attractionFullName} in ${siteConfig.cityName}, ${siteConfig.stateProvince}, ${siteConfig.countryName}.`,
+    url: siteConfig.siteUrl,
+    image: [
+      heroImage,
+      `${siteConfig.siteUrl}/gallery/${siteConfig.galleryPrefix}2.jpg`,
+      `${siteConfig.siteUrl}/gallery/${siteConfig.galleryPrefix}3.jpg`,
+    ],
+    isAccessibleForFree: true,
+    publicAccess: true,
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address,
-      addressCountry: 'TH',
+      addressLocality: siteConfig.cityName,
+      addressRegion: siteConfig.stateProvince,
+      postalCode: siteConfig.postalCode,
+      addressCountry: siteConfig.countryCode2Letter,
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: siteConfig.coords.lat,
-      longitude: siteConfig.coords.lng,
+      latitude: siteConfig.latitude,
+      longitude: siteConfig.longitude,
     },
+    hasMap: siteConfig.mapsUrl,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: siteConfig.rating,
-      reviewCount: siteConfig.reviewCount.replace(/,/g, ''),
+      reviewCount: siteConfig.reviewCountNumeric,
+      bestRating: 5,
+      worstRating: 1,
     },
     openingHoursSpecification: [
       {
@@ -47,16 +70,37 @@ const jsonLd = [
     ],
     sameAs: siteConfig.sameAs,
   },
-  {
+];
+
+// FAQPage JSON-LD — 增加 5-8 个 Q&A 抢占搜索顶部卡片
+const faqEntities = (faqs as any[]).slice(0, 8).map((f) => ({
+  '@type': 'Question',
+  name: f.q,
+  acceptedAnswer: { '@type': 'Answer', text: f.a },
+}));
+
+if (faqEntities.length > 0) {
+  jsonLd.push({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
+    mainEntity: faqEntities,
+  });
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteConfig.siteUrl}/#website`,
+  url: siteConfig.siteUrl,
+  name: siteConfig.attractionFullName,
+  inLanguage: ['th', 'en', 'zh-CN'],
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.attractionFullName,
+    url: siteConfig.siteUrl,
   },
-];
+};
+jsonLd.push(organizationJsonLd);
 ---
 
 <!doctype html>
@@ -64,26 +108,54 @@ const jsonLd = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpeg" href={`/gallery/wachirathan-waterfall-1.jpg`} />
+    <link rel="icon" type="image/jpeg" href={`/gallery/${siteConfig.galleryPrefix}1.jpg`} />
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- Canonical -->
     <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph & Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={htmlLang[lang]} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${siteConfig.domain}/gallery/wachirathan-waterfall-1.jpg`} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={siteConfig.attractionFullName} />
+    <meta property="og:image" content={heroImage} />
+    <meta
+      property="og:image:alt"
+      content={`${siteConfig.attractionFullName} - Main view in ${siteConfig.cityName}, ${siteConfig.countryName}`}
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImage} />
+    <meta
+      name="twitter:image:alt"
+      content={`${siteConfig.attractionFullName} in ${siteConfig.cityName}`}
+    />
+
+    <!-- Multilingual alternates -->
     {languagesList.map((l) => (
-      <link rel="alternate" hreflang={htmlLang[l]} href={`${siteConfig.domain}/${l}/`} />
+      <link rel="alternate" hreflang={htmlLang[l]} href={`${siteConfig.siteUrl}/${l}/`} />
     ))}
-    <link rel="alternate" hreflang="x-default" href={`${siteConfig.domain}/th/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteConfig.siteUrl}/th/`} />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0d2a2e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content={siteConfig.attractionFullName} />
+    <link rel="apple-touch-icon" href={`/gallery/${siteConfig.galleryPrefix}1.jpg`} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — GA4: G-HXM22WWPKP -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -91,13 +163,23 @@ const jsonLd = [
       gtag('js', new Date());
       gtag('config', 'G-HXM22WWPKP');
     </script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Sarabun:wght@300;400;500;600;700&family=Charm:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class="grain">
     <slot />
+    <!-- PWA Service Worker registration -->
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>
