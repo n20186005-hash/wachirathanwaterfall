@@ -36,6 +36,27 @@ const { messages } = await getI18n(new URL(`https://x.com/${lang}/`));
     <History messages={messages} />
     <Weather lang={lang} messages={messages} />
     <Guide messages={messages} />
+
+    {lang === 'en' && (
+      <section class="mx-auto max-w-6xl px-5 py-10">
+        <h2 class="font-display text-2xl text-teak mb-6 text-center">In-depth guides</h2>
+        <div class="grid gap-5 md:grid-cols-3">
+          <a href="/en/entrance-fee/" class="block rounded-2xl border border-gold/30 bg-white/50 p-6 hover:bg-gold/5 transition">
+            <h3 class="font-display text-lg text-teak mb-2">Entrance Fee &amp; Opening Hours</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">Park fees, foreigner vs Thai rates, vehicle charges and where to pay at the gate.</p>
+          </a>
+          <a href="/en/how-to-get-there/" class="block rounded-2xl border border-gold/30 bg-white/50 p-6 hover:bg-gold/5 transition">
+            <h3 class="font-display text-lg text-teak mb-2">How to Get There</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">Distance from Chiang Mai, self-drive, taxi and tour options, parking and the walk in.</p>
+          </a>
+          <a href="/en/best-time-to-visit/" class="block rounded-2xl border border-gold/30 bg-white/50 p-6 hover:bg-gold/5 transition">
+            <h3 class="font-display text-lg text-teak mb-2">Best Time to Visit</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">Rainy, cool and hot season compared, plus the best light and how to avoid crowds.</p>
+          </a>
+        </div>
+      </section>
+    )}
+
     <Facilities messages={messages} />
     <Food messages={messages} />
     <Seasonal messages={messages} />

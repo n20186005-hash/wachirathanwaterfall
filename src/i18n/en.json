@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Wachirathan Waterfall — Visitor Guide to Doi Inthanon's Diamond Falls",
-    "description": "A complete visitor guide to Wachirathan Waterfall in Doi Inthanon National Park, Chiang Mai — history, how to get there, fees, best time to visit, and real traveler reviews."
+    "title": "Wachirathan Waterfall, Chiang Mai | Entrance Fee & Guide",
+    "description": "Visit Wachirathan Waterfall in Doi Inthanon National Park, Chiang Mai. Find entrance fees, opening hours, directions, parking and the best time to visit."
   },
   "header": {
     "home": "Home",
@@ -52,7 +52,7 @@
     "defaultWind": "9 km/h",
     "defaultGolden": "06:40 – 08:10",
     "defaultSunset": "18:35",
-    "defaultBlue": "18:55 – 19:25",
+    "defaultBlue": "16:00 – 17:00",
     "defaultTip": "Bring rain gear & non-slip shoes; misty zones get slippery"
   },
   "about": {
@@ -150,7 +150,8 @@
       "time": "06:00 – 17:00",
       "items": [
         { "label": "Daily (Mon–Sun)", "value": "06:00–17:00" }
-      ]
+      ],
+      "verified": "Hours shown as of October 2026 — please confirm with Doi Inthanon National Park before visiting."
     },
     "fees": {
       "tag": "Entrance Fee",
@@ -159,7 +160,8 @@
         { "title": "Foreigners (adult)", "desc": "300 THB" },
         { "title": "Foreigners (child)", "desc": "150 THB" },
         { "title": "Thai nationals (adult/child)", "desc": "50 / 20 THB" }
-      ]
+      ],
+      "note": "Thai nationals may receive local resident rates; a separate vehicle entry fee may apply inside the park. Confirm current rates with DNP."
     },
     "transport": {
       "tag": "Getting There",
@@ -302,15 +304,16 @@
       { "text": "The falls are stunning and the roar fills the forest — and it's an easy walk in.", "source": "— Summarised from Google Maps" },
       { "text": "Caught a rainbow in the spray — mornings are best.", "source": "— Summarised from Google Maps" }
     ],
+    "itemSource": "— Summarised from Google Maps",
     "items": [
-      { "text": "Huge and majestic, just a short walk from the car park.", "rating": 5, "name": "Somchai Y.", "date": "Mar 2026" },
-      { "text": "Came in the morning — lots of mist and spray, photos turned out great.", "rating": 5, "name": "Nina K.", "date": "Feb 2026" },
-      { "text": "The roar is so loud you can barely talk, but it's fun.", "rating": 4, "name": "Pierre L.", "date": "Jan 2026" },
-      { "text": "Slightly steep path but the wooden bridge makes it easy.", "rating": 5, "name": "Anne A.", "date": "Dec 2025" },
-      { "text": "Less water in the dry season but still beautiful, good for families.", "rating": 4, "name": "Tom B.", "date": "Nov 2025" },
-      { "text": "Roadside food was good — had a hot khao soi.", "rating": 5, "name": "Jira W.", "date": "Oct 2025" },
-      { "text": "The upper viewpoint is a great wide angle, would come back.", "rating": 5, "name": "Anna S.", "date": "Sep 2025" },
-      { "text": "Busy on holidays — come early for parking.", "rating": 4, "name": "Witthaya T.", "date": "Aug 2025" }
+      { "text": "The falls are huge and powerful — and it's just a short, easy walk in from the car park.", "rating": 5 },
+      { "text": "Caught a rainbow in the spray; mornings are the best for light and fewer crowds.", "rating": 5 },
+      { "text": "The roar is so loud you can barely talk, but it's fun and impressive.", "rating": 4 },
+      { "text": "Slightly steep in places, but the wooden bridge makes it easy to reach the base.", "rating": 5 },
+      { "text": "Less water in the dry season, but still beautiful and good for families.", "rating": 4 },
+      { "text": "Roadside food stalls were good — had a hot khao soi after the walk.", "rating": 5 },
+      { "text": "The upper viewpoint gives a great wide-angle of the whole fall; would return.", "rating": 5 },
+      { "text": "Busy on holidays — come early if you want parking and photos without crowds.", "rating": 4 }
     ],
     "viewLocation": "View on Google Maps"
   },

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import en from '../../i18n/en.json';
+
+const title = 'Best Time to Visit Wachirathan Waterfall | Season & Weather';
+const description = 'When to visit Wachirathan Waterfall in Doi Inthanon: rainy vs cool vs hot season, water flow, light for photos, rainbows in the spray and how to avoid crowds.';
+const canonical = 'https://wachirathanwaterfall.com/en/best-time-to-visit/';
+
+const faqs = [
+  { q: 'What is the best month to visit?', a: 'The cool season (November–February) is the most comfortable, with milder temperatures and clearer skies, though water flow is lower than in the rainy season. September–October gives the fullest, most powerful waterfall if you do not mind afternoon rain.' },
+  { q: 'Is the rainy season worth it?', a: 'Yes for the spectacle. From June to October the falls are at their most forceful and photogenic, but trails can be muddy and afternoon showers are common. Mornings are usually drier.' },
+  { q: 'What time of day is best for photos?', a: 'Early morning. The light is softer, the spray often catches a rainbow, and the car park and viewpoint are far less crowded. Arriving right at opening also helps you beat the heat and tour groups.' },
+  { q: 'When can I see a rainbow in the spray?', a: 'Rainbows appear in the mist on sunny mornings, especially in the rainy and cool seasons when water volume is higher. They are most likely shortly after the falls are lit by direct sunlight.' },
+  { q: 'How crowded does it get?', a: 'Weekends and Thai holidays are busy, with limited parking. Weekday mornings are the quietest. If you visit on a holiday, come early for a space and clearer photos.' }
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wachirathanwaterfall.com/en/' },
+      { '@type': 'ListItem', position: 2, name: 'Best Time to Visit', item: canonical }
+    ]},
+    { '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
+  ]
+};
+---
+
+<BaseLayout lang="en" title={title} description={description} messages={en}>
+  <Header lang="en" messages={en} />
+  <main class="mx-auto max-w-3xl px-5 py-12">
+    <nav class="text-sm text-ink/60 mb-6" aria-label="Breadcrumb">
+      <a href="/en/" class="text-gold hover:underline">Home</a>
+      <span class="mx-2">›</span>
+      <span class="text-ink/80">Best Time to Visit</span>
+    </nav>
+
+    <h1 class="font-display text-3xl md:text-4xl text-teak mb-4">Best Time to Visit Wachirathan Waterfall</h1>
+    <p class="text-lg text-ink/80 mb-8 leading-relaxed">
+      The waterfall is open all year, but the experience changes a lot with the seasons. Your ideal time depends on whether you want the most powerful falls, the easiest walk, or the best light for photos.
+    </p>
+
+    <section class="rounded-2xl border border-gold/30 bg-white/50 p-6 mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Rainy season (June – October)</h2>
+      <p class="text-ink/85 leading-relaxed">The falls are at their fullest and most dramatic, with a heavy, roaring curtain of water. Trails can be muddy and afternoon showers are common, so bring rain gear and wear shoes with grip. Mornings are usually the drier, calmer window.</p>
+    </section>
+
+    <section class="rounded-2xl border border-gold/30 bg-white/50 p-6 mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Cool season (November – February)</h2>
+      <p class="text-ink/85 leading-relaxed">The most comfortable time to visit — milder temperatures, clearer skies and less humidity. Water volume is lower than in the rainy season, but the falls are still impressive and the walk is at its easiest. This is also the busiest period, so arrive early.</p>
+    </section>
+
+    <section class="rounded-2xl border border-gold/30 bg-white/50 p-6 mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Hot season (March – May)</h2>
+      <p class="text-ink/85 leading-relaxed">Warm to hot, with the lowest water flow of the year. The falls are thinner but still pretty, and the dry trails make for an easy stroll. Go in the early morning to avoid the midday heat and strong UV.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Light, rainbows &amp; avoiding crowds</h2>
+      <p class="text-ink/85 leading-relaxed">Early morning is best for photos: softer light, fewer people, and the best chance of a rainbow in the spray on sunny days. Weekdays and right at opening are quietest; weekends and Thai holidays fill the car park quickly, so come early for a space and clearer shots.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Frequently asked questions</h2>
+      <div class="space-y-4">
+        {faqs.map((f) => (
+          <details class="rounded-xl border border-gold/20 bg-white/40 p-4">
+            <summary class="font-medium text-teak cursor-pointer">{f.q}</summary>
+            <p class="mt-2 text-sm text-ink/80 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <nav class="flex flex-wrap gap-3 text-sm">
+      <a href="/en/#guide" class="rounded-full border border-gold/40 px-4 py-2 text-teak hover:bg-gold/10">← Back to main guide</a>
+      <a href="/en/entrance-fee/" class="rounded-full border border-gold/40 px-4 py-2 text-teak hover:bg-gold/10">Entrance fee →</a>
+      <a href="/en/how-to-get-there/" class="rounded-full border border-gold/40 px-4 py-2 text-teak hover:bg-gold/10">How to get there →</a>
+    </nav>
+  </main>
+  <Footer lang="en" messages={en} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</BaseLayout>

@@ -169,14 +169,29 @@ const coordsLabel = hero.coordsLabel;
         // 实时日出 / 日落 / 蓝调时刻（基于景点实际坐标）
         const fmt = (date) => pad(date.getHours()) + ':' + pad(date.getMinutes());
         const addMin = (date, m) => new Date(date.getTime() + m * 60000);
+        const minTime = (a, b) => (a.getHours() * 60 + a.getMinutes() <= b.getHours() * 60 + b.getMinutes() ? a : b);
         const sr = new Date(d.daily.sunrise[0]);
         const ss = new Date(d.daily.sunset[0]);
+        // 园区开放至 17:00，夜间拍摄时段不可入园，需钳制在开放时间内
+        const closeAt = new Date(ss);
+        closeAt.setHours(17, 0, 0, 0);
         const gEl = document.getElementById('golden-time');
         const sEl = document.getElementById('sunset-time');
         const bEl = document.getElementById('blue-time');
-        if (gEl) gEl.textContent = fmt(sr) + ' – ' + fmt(addMin(sr, 90));
-        if (sEl) sEl.textContent = fmt(ss);
-        if (bEl) bEl.textContent = fmt(addMin(ss, 20)) + ' – ' + fmt(addMin(ss, 50));
+        if (gEl) {
+          let gStart = sr, gEnd = addMin(sr, 90);
+          gEnd = minTime(gEnd, closeAt);
+          gEl.textContent = fmt(gStart) + ' – ' + fmt(gEnd);
+        }
+        if (sEl) sEl.textContent = fmt(minTime(ss, closeAt));
+        if (bEl) {
+          const bStart = addMin(ss, 20);
+          if (bStart > closeAt) {
+            bEl.textContent = '—';
+          } else {
+            bEl.textContent = fmt(bStart) + ' – ' + fmt(minTime(addMin(ss, 50), closeAt));
+          }
+        }
 
         if (statusEl) statusEl.textContent = weatherError ? '' : '';
         if (bodyEl) bodyEl.classList.remove('hidden');

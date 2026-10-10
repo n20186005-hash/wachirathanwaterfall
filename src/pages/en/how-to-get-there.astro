@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import en from '../../i18n/en.json';
+
+const title = 'How to Get to Wachirathan Waterfall | From Chiang Mai';
+const description = 'Directions to Wachirathan Waterfall in Doi Inthanon National Park: distance from Chiang Mai, self-drive, taxi, tour and public transport options, parking and the walk to the viewpoint.';
+const canonical = 'https://wachirathanwaterfall.com/en/how-to-get-there/';
+
+const faqs = [
+  { q: 'How far is Wachirathan Waterfall from Chiang Mai?', a: 'It is about 70–80 km south-west of Chiang Mai, roughly a 1.5–2 hour drive via Highway 108 to Chom Thong, then Highway 1009 (the Doi Inthanon road) to around Km. 21–22.' },
+  { q: 'Can I get there by public transport?', a: 'Public transport is limited. Most visitors go by rented car or motorbike, private taxi, or a joined Doi Inthanon tour. A few songthaews run the Chom Thong–Doi Inthanon route, but they are infrequent and do not stop on a fixed schedule at the waterfall.' },
+  { q: 'Where do I park, and how far is the walk?', a: 'There is a car park just off Highway 1009 near the waterfall. From the car park it is a short, mostly flat walk of about 5–10 minutes along a boardwalk and wooden bridge to the main viewpoint and the base of the falls.' },
+  { q: 'Is the walk difficult?', a: 'The main viewpoint is easy and suitable for most fitness levels. There are a few steps and the boardwalk can be slippery when wet, but no steep climb is required to see the waterfall.' },
+  { q: 'Should I join a tour or drive myself?', a: 'Self-driving gives the most flexibility and lets you combine Wachirathan with Sirithan and Mae Ya waterfalls on the same road. A tour is easier if you prefer not to drive, and usually includes a guide and other Doi Inthanon stops.' }
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wachirathanwaterfall.com/en/' },
+      { '@type': 'ListItem', position: 2, name: 'How to Get There', item: canonical }
+    ]},
+    { '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
+  ]
+};
+---
+
+<BaseLayout lang="en" title={title} description={description} messages={en}>
+  <Header lang="en" messages={en} />
+  <main class="mx-auto max-w-3xl px-5 py-12">
+    <nav class="text-sm text-ink/60 mb-6" aria-label="Breadcrumb">
+      <a href="/en/" class="text-gold hover:underline">Home</a>
+      <span class="mx-2">›</span>
+      <span class="text-ink/80">How to Get There</span>
+    </nav>
+
+    <h1 class="font-display text-3xl md:text-4xl text-teak mb-4">How to Get to Wachirathan Waterfall</h1>
+    <p class="text-lg text-ink/80 mb-8 leading-relaxed">
+      Wachirathan Waterfall sits on <strong>Highway 1009</strong>, the road up Doi Inthanon, about 21–22 km into the national park from the Chom Thong entrance. It is an easy half-day stop on the way to the summit.
+    </p>
+
+    <section class="rounded-2xl border border-gold/30 bg-white/50 p-6 mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">By car or motorbike (most common)</h2>
+      <p class="text-ink/85 leading-relaxed">From Chiang Mai, take Highway 108 south to Chom Thong, then turn onto Highway 1009 and follow signs for Doi Inthanon. The waterfall is well signposted on the left at around Km. 21–22. The drive takes roughly 1.5–2 hours. Rental cars and motorbikes are widely available in Chiang Mai.</p>
+    </section>
+
+    <section class="rounded-2xl border border-gold/30 bg-white/50 p-6 mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Taxi or private car</h2>
+      <p class="text-ink/85 leading-relaxed">A private taxi or grab-style car from Chiang Mai is convenient for small groups and avoids driving the mountain road yourself. Agree on a round-trip price and waiting time, as return transport can be hard to find at the park.</p>
+    </section>
+
+    <section class="rounded-2xl border border-gold/30 bg-white/50 p-6 mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Joined tour</h2>
+      <p class="text-ink/85 leading-relaxed">Many Doi Inthanon day tours include Wachirathan Waterfall along with other stops such as the twin pagodas, the summit, and nearby waterfalls. This is the easiest option if you prefer not to plan the route.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Parking &amp; the walk to the falls</h2>
+      <p class="text-ink/85 leading-relaxed">A car park sits just off the highway. From there it is a short, mostly flat walk of about 5–10 minutes along a boardwalk and wooden bridge to the main viewpoint and the base of the falls. The path is easy for most visitors, with only a few steps; take care as the boardwalk can be slippery when wet.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-display text-xl text-teak mb-4">Frequently asked questions</h2>
+      <div class="space-y-4">
+        {faqs.map((f) => (
+          <details class="rounded-xl border border-gold/20 bg-white/40 p-4">
+            <summary class="font-medium text-teak cursor-pointer">{f.q}</summary>
+            <p class="mt-2 text-sm text-ink/80 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <nav class="flex flex-wrap gap-3 text-sm">
+      <a href="/en/#guide" class="rounded-full border border-gold/40 px-4 py-2 text-teak hover:bg-gold/10">← Back to main guide</a>
+      <a href="/en/entrance-fee/" class="rounded-full border border-gold/40 px-4 py-2 text-teak hover:bg-gold/10">Entrance fee →</a>
+      <a href="/en/best-time-to-visit/" class="rounded-full border border-gold/40 px-4 py-2 text-teak hover:bg-gold/10">Best time to visit →</a>
+    </nav>
+  </main>
+  <Footer lang="en" messages={en} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</BaseLayout>
