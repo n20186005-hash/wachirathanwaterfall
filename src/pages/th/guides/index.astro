@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import th from '../../../i18n/th.json';
+import { guides } from '../../../data/guides';
+const canonical = 'https://wachirathanwaterfall.com/th/guides/';
+---
+<BaseLayout lang="th" title="คู่มือน้ำตกวชิรธารและที่เที่ยวดอยอินทนนท์" description="คู่มือท่องเที่ยวน้ำตกวชิรธาร เส้นทางจากเชียงใหม่ ที่เที่ยวใกล้เคียง ฤดูกาล ค่าธรรมเนียม และการวางแผนเที่ยวดอยอินทนนท์" messages={th} canonicalUrl={canonical} homeAlternates={false}>
+  <Header lang="th" messages={th}/>
+  <main class="max-w-6xl mx-auto px-5 pt-28 pb-16">
+    <nav class="text-sm mb-7"><a class="underline text-teak" href="/th/">หน้าแรก</a> / คู่มือท่องเที่ยว</nav>
+    <h1 class="font-display text-4xl text-teak mb-4">คู่มือน้ำตกวชิรธารและดอยอินทนนท์</h1>
+    <p class="text-lg text-ink/80 max-w-3xl leading-relaxed mb-12">รวมจุดเที่ยวใกล้เคียงและคำแนะนำวางแผนจากเชียงใหม่ เลือกอ่านตามสถานที่หรือปัญหาที่กำลังเตรียมตัวก่อนเดินทาง</p>
+    {(['nearby','planning'] as const).map((kind)=><section class="mb-12"><h2 class="font-display text-2xl text-teak mb-6">{kind==='nearby'?'สถานที่เที่ยวใกล้เคียง':'การเดินทางและการวางแผน'}</h2><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">{guides.filter((g)=>g.kind===kind).map((g)=><a href={`/th/guides/${g.slug}/`} class="block rounded-2xl border border-gold/30 bg-white/50 p-6 hover:bg-gold/10 transition"><h3 class="text-lg font-semibold text-teak mb-3">{g.title}</h3><p class="text-sm leading-relaxed text-ink/75">{g.intro}</p><span class="inline-block mt-4 text-gold">อ่านคู่มือ →</span></a>)}</div></section>)}
+  </main>
+  <Footer lang="th" messages={th}/>
+</BaseLayout>

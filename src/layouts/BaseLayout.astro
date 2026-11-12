@@ -8,9 +8,11 @@ interface Props {
   title: string;
   description: string;
   messages: Record<string, any>;
+  canonicalUrl?: string;
+  homeAlternates?: boolean;
 }
-const { lang, title, description, messages } = Astro.props;
-const canonical = `${siteConfig.siteUrl}/${lang}/`;
+const { lang, title, description, messages, canonicalUrl, homeAlternates = true } = Astro.props;
+const canonical = canonicalUrl ?? `${siteConfig.siteUrl}/${lang}/`;
 const heroImage = `${siteConfig.siteUrl}/gallery/${siteConfig.galleryPrefix}1.jpg`;
 
 const faqs = (messages && messages.guide && messages.guide.faqs) ? messages.guide.faqs : [];
@@ -139,10 +141,10 @@ jsonLd.push(organizationJsonLd);
     />
 
     <!-- Multilingual alternates -->
-    {languagesList.map((l) => (
+    {homeAlternates && languagesList.map((l) => (
       <link rel="alternate" hreflang={htmlLang[l]} href={`${siteConfig.siteUrl}/${l}/`} />
     ))}
-    <link rel="alternate" hreflang="x-default" href={`${siteConfig.siteUrl}/th/`} />
+    {homeAlternates && <link rel="alternate" hreflang="x-default" href={`${siteConfig.siteUrl}/th/`} />}
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.webmanifest" />

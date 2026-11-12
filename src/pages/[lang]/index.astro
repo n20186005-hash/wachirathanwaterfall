@@ -21,6 +21,7 @@ import Sources from '../../components/Sources.astro';
 import MapSection from '../../components/MapSection.astro';
 import Footer from '../../components/Footer.astro';
 import { getI18n } from '../../i18n/ui';
+import { guides } from '../../data/guides';
 
 const raw = Astro.params.lang as string | undefined;
 const lang: Lang = (languagesList as readonly string[]).includes(raw ?? '') ? (raw as Lang) : defaultLang;
@@ -36,6 +37,22 @@ const { messages } = await getI18n(new URL(`https://x.com/${lang}/`));
     <History messages={messages} />
     <Weather lang={lang} messages={messages} />
     <Guide messages={messages} />
+
+    {lang === 'th' && (
+      <section class="mx-auto max-w-6xl px-5 py-10" aria-labelledby="more-guides">
+        <div class="rounded-2xl border border-gold/30 bg-white/50 p-7 md:p-9 flex flex-col md:flex-row gap-5 md:items-center md:justify-between">
+          <div><h2 id="more-guides" class="font-display text-2xl text-teak mb-2">เที่ยวต่อรอบน้ำตกวชิรธาร</h2><p class="text-ink/75 leading-relaxed">สำรวจสถานที่ใกล้เคียง เส้นทางดอยอินทนนท์ และคู่มือเตรียมตัวเดินทาง</p></div>
+          <a href="/th/guides/" class="shrink-0 rounded-full bg-teak text-ivory px-6 py-3 text-center hover:bg-teak/90">ดูคู่มือท่องเที่ยวทั้งหมด →</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 mt-5">
+          {guides.filter((guide) => guide.kind === 'nearby').slice(0,6).map((guide) => (
+            <a href={`/th/guides/${guide.slug}/`} class="block rounded-xl border border-gold/30 bg-white/50 p-5 hover:bg-gold/10 transition">
+              <h3 class="font-semibold text-teak mb-2">{guide.title}</h3><p class="text-sm text-ink/75 leading-relaxed">{guide.intro}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     {lang === 'en' && (
       <section class="mx-auto max-w-6xl px-5 py-10">
