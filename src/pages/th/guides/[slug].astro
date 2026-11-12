@@ -19,7 +19,7 @@ const mapUrl = guide.mapQuery
   ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(guide.mapQuery + ', Chiang Mai, Thailand')}`
   : siteConfig.mapsUrl;
 const photo = extra.photos?.[0];
-const imageSrc = photo ? `/nearby/${photo}` : '/gallery/wachirathan-waterfall-3.jpg';
+const imageSrc = photo ? `/nearby/${photo}?v=20261112` : '/gallery/wachirathan-waterfall-3.jpg';
 const imageCaption = photo ? `ภาพ${guide.title} — ${guide.slug === 'hmong-market' ? 'Wongnai (ภาพจากผู้เยี่ยมชม)' : 'Wikimedia Commons'}` : 'ภาพน้ำตกวชิรธารประกอบการวางแผนเที่ยวดอยอินทนนท์ — ไม่ใช่ภาพของสถานที่อื่น';
 const faq = [
   { q: `ควรจัดทริป${guide.title}ร่วมกับน้ำตกวชิรธารอย่างไร?`, a: guide.route },
