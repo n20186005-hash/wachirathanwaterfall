@@ -28,6 +28,9 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://wachirathanwaterfall.com/th/sources/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://wachirathanwaterfall.com/en/sources/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://wachirathanwaterfall.com/zh/sources/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url>
     <loc>https://wachirathanwaterfall.com/th/privacy-policy/</loc>
     <changefreq>yearly</changefreq>

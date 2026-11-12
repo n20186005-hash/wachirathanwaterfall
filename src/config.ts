@@ -26,11 +26,11 @@ export const siteConfig = {
   phone: '+6653285730',
   phoneDisplay: '+66 53 285 730',
 
-  // 最新谷歌评分与评价数（同步自 Google Maps · 2026 年 9 月）
+  // 最新谷歌评分与评价数（用户提供的 2026 年 11 月数据）
   rating: 4.7,
-  reviewCount: '10,776',
-  reviewCountNumeric: 10776,
-  reviewSyncedAt: '2026 年 9 月',
+  reviewCount: '10,997',
+  reviewCountNumeric: 10997,
+  reviewSyncedAt: '2026 年 11 月',
 
   // 实际坐标（用于天气 / 日落 API 与地图嵌入）
   coords: { lat: 18.542, lng: 98.5986 },
