@@ -157,13 +157,23 @@ jsonLd.push(organizationJsonLd);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Google tag (gtag.js) — GA4: G-HXM22WWPKP -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
+    <!-- Analytics is loaded only after the visitor explicitly opts in. -->
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HXM22WWPKP');
+      window.enableSiteAnalytics = function () {
+        if (document.querySelector('script[data-site-analytics]')) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){ window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-HXM22WWPKP');
+        const script = document.createElement('script');
+        script.async = true;
+        script.dataset.siteAnalytics = 'true';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP';
+        document.head.appendChild(script);
+      };
+      try {
+        if (localStorage.getItem('wachirathan_analytics_consent') === 'accepted') window.enableSiteAnalytics();
+      } catch (_) { /* Storage unavailable: analytics remains off. */ }
     </script>
 
     <link

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getI18n } from '../i18n/ui';
+import { legalExtended } from '../data/legalExtended';
 
 interface Props {
   type: 'privacy' | 'terms' | 'cookies';
@@ -10,52 +11,54 @@ interface Props {
 const { type } = Astro.props;
 const { lang, messages } = await getI18n(Astro.url);
 const doc = (messages.legal as any)[type];
+const extra = legalExtended[lang];
 ---
 <BaseLayout lang={lang} title={doc.title} description={doc.title} messages={messages}>
   <Header lang={lang} messages={messages} />
-  <main class="mx-auto max-w-3xl px-5 py-14 text-ink/85 leading-relaxed">
+  <main class="mx-auto max-w-4xl px-5 pt-28 pb-16 text-ink/85 leading-relaxed">
     <h1 class="font-display text-3xl md:text-4xl text-teak mb-2">{doc.title}</h1>
-    <p class="text-sm text-ink/50 mb-8">{doc.updated}</p>
+    <p class="text-sm text-ink/50 mb-8">{lang === 'zh' ? '最后更新：2026 年 11 月 12 日' : lang === 'th' ? 'อัปเดตล่าสุด: 12 พฤศจิกายน 2569' : 'Last updated: 12 November 2026'}</p>
 
-    {type !== 'cookies' && doc.sections.map((s: any) => (
-      <section class="mb-8">
-        <h2 class="font-display text-xl text-teak mb-2">{s.h}</h2>
-        {s.p && <p class="mb-3">{s.p}</p>}
-        {s.list && (
-          <ul class="list-disc pl-6 space-y-1">
-            {s.list.map((li: string) => <li>{li}</li>)}
-          </ul>
-        )}
+    {type !== 'cookies' && <p class="mb-8 rounded-xl bg-gold/10 p-5">{type === 'privacy' ? extra.privacy[0].p : extra.terms[0].p}</p>}
+    {type !== 'cookies' && extra[type].slice(1).map((s) => (
+      <section class="mb-9 border-b border-gold/20 pb-6">
+        <h2 class="font-display text-xl text-teak mb-3">{s.h}</h2>
+        <p class="mb-3">{s.p}</p>
+        {s.list && <ul class="list-disc pl-6 space-y-2">{s.list.map((li) => <li>{li}</li>)}</ul>}
       </section>
     ))}
 
     {type === 'cookies' && (
       <>
-        <p class="mb-6">{doc.intro}</p>
-        <div class="space-y-4">
-          {doc.categories.map((c: any) => (
-            <div class="rounded-2xl border border-teak/20 p-5 bg-white/40">
-              <div class="flex items-center justify-between gap-3">
-                <h2 class="font-display text-lg text-teak">{c.h}</h2>
-                <span class={`text-xs px-2 py-1 rounded-full ${c.active ? 'bg-teak/15 text-teak' : 'bg-ink/10 text-ink/60'}`}>{c.status}</span>
-              </div>
-              <p class="mt-2 text-sm text-ink/75">{c.p}</p>
-              {c.sub && (
-                <div class="mt-2 flex items-center justify-between text-sm text-ink/60">
-                  <span>{c.sub}</span>
-                  <span class={c.active ? 'text-teak' : 'text-ink/50'}>{c.subStatus}</span>
-                </div>
-              )}
-            </div>
-          ))}
+        <p class="mb-6">{extra.cookies[0].p}</p>
+        <div class="space-y-6">{extra.cookies.slice(1).map((s) => <section class="border-b border-gold/20 pb-5"><h2 class="font-display text-xl text-teak mb-2">{s.h}</h2><p>{s.p}</p></section>)}</div>
+        <div class="mt-8 rounded-2xl border border-teak/20 bg-white/60 p-6">
+          <label for="analytics-opt-in" class="flex items-center gap-3 cursor-pointer font-semibold text-teak"><input id="analytics-opt-in" type="checkbox" class="h-5 w-5 accent-teak" />{extra.analyticsLabel}</label>
+          <p class="mt-3 text-sm">{doc.categories[1].p}</p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <button id="cookie-save" type="button" class="rounded-full bg-teak px-5 py-2 text-sm font-medium text-ivory">{doc.save}</button>
+            <button id="cookie-reject" type="button" class="rounded-full border border-ink/30 px-5 py-2 text-sm text-ink/80">{doc.rejectAll}</button>
+          </div>
+          <p id="cookie-result" aria-live="polite" class="mt-4 text-sm text-teak"></p>
         </div>
-        <p class="mt-6 text-sm text-ink/60">{doc.consent}</p>
-        <div class="mt-6 flex gap-3">
-          <button type="button" class="rounded-full bg-teak px-5 py-2 text-sm font-medium text-ivory">{doc.save}</button>
-          <button type="button" class="rounded-full border border-ink/30 px-5 py-2 text-sm text-ink/80">{doc.rejectAll}</button>
-        </div>
+        <script is:inline define:vars={{ saved: extra.saved, rejected: extra.rejected }}>
+          const prefKey = 'wachirathan_analytics_consent';
+          const choice = document.getElementById('analytics-opt-in');
+          const feedback = document.getElementById('cookie-result');
+          try { choice.checked = localStorage.getItem(prefKey) === 'accepted'; } catch (_) {}
+          function saveChoice(accepted) {
+            try { localStorage.setItem(prefKey, accepted ? 'accepted' : 'rejected'); }
+            catch (_) { feedback.textContent = 'Browser storage is unavailable.'; return; }
+            feedback.textContent = accepted ? saved : rejected;
+            if (accepted) window.enableSiteAnalytics?.();
+            else if (document.querySelector('script[data-site-analytics]')) location.reload();
+          }
+          document.getElementById('cookie-save')?.addEventListener('click', () => saveChoice(choice.checked));
+          document.getElementById('cookie-reject')?.addEventListener('click', () => { choice.checked = false; saveChoice(false); });
+        </script>
       </>
     )}
+    <div class="mt-10 rounded-xl bg-gold/10 p-5"><strong>{extra.contactLabel}:</strong> <a class="text-teak underline" href="mailto:laupetter72@gmail.com">laupetter72@gmail.com</a></div>
   </main>
   <Footer lang={lang} messages={messages} />
 </BaseLayout>
