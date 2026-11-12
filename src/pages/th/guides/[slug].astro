@@ -20,7 +20,7 @@ const mapUrl = guide.mapQuery
   : siteConfig.mapsUrl;
 const photo = extra.photos?.[0];
 const imageSrc = photo ? `/nearby/${photo}` : '/gallery/wachirathan-waterfall-3.jpg';
-const imageCaption = photo ? `ภาพ${guide.title} จากคลังภาพสาธารณะ Wikimedia Commons` : 'ภาพน้ำตกวชิรธารประกอบการวางแผนเที่ยวดอยอินทนนท์ — ไม่ใช่ภาพของสถานที่อื่น';
+const imageCaption = photo ? `ภาพ${guide.title} — ${guide.slug === 'hmong-market' ? 'Wongnai (ภาพจากผู้เยี่ยมชม)' : 'Wikimedia Commons'}` : 'ภาพน้ำตกวชิรธารประกอบการวางแผนเที่ยวดอยอินทนนท์ — ไม่ใช่ภาพของสถานที่อื่น';
 const faq = [
   { q: `ควรจัดทริป${guide.title}ร่วมกับน้ำตกวชิรธารอย่างไร?`, a: guide.route },
   { q: `มีข้อควรระวังอะไรสำหรับ${guide.title}?`, a: guide.advice },
@@ -48,11 +48,11 @@ const related = guides.filter((g) => g.slug !== guide.slug && g.kind === guide.k
     </header>
     <section class="mb-11 rounded-2xl border-l-4 border-gold bg-white/60 p-7 md:p-9" aria-labelledby="about-management">
       <h2 id="about-management" class="font-display text-2xl text-teak mb-4">เกี่ยวกับ{guide.title}และผู้ดูแลพื้นที่</h2>
-      <p class="leading-loose text-ink/85">{extra.heritage}</p>
-      <p class="leading-loose text-ink/85 mt-4">{extra.manager} ข้อมูลวันเปิด เส้นทาง และเงื่อนไขเข้าชมให้ยึดประกาศของหน่วยงานที่รับผิดชอบสถานที่นั้นในวันที่เดินทาง</p>
+      <p class="leading-loose text-ink/85">{extra.manager}</p>
+      <p class="leading-loose text-ink/85 mt-4">บทบาทของผู้ดูแลพื้นที่คือกำหนดข้อปฏิบัติ การอนุรักษ์ และการจัดการผู้มาเยือน ข้อมูลเวลาเปิด เส้นทาง และเงื่อนไขเข้าชมให้ยึดประกาศของหน่วยงานที่รับผิดชอบสถานที่นั้นในวันที่เดินทาง</p>
     </section>
     <section class="grid md:grid-cols-2 gap-8 mb-12 items-center">
-      <div><h2 class="font-display text-2xl text-teak mb-4">ทำความรู้จัก{guide.title}</h2><p class="text-ink/85 leading-loose">{guide.detail}</p><p class="mt-4 text-ink/80 leading-loose">{guide.intro} การวางแผนร่วมกับน้ำตกวชิรธารควรคำนึงถึงเวลาเดินทางจริง สภาพอากาศบนภูเขา และข้อกำหนดการเข้าพื้นที่ในวันนั้น</p></div>
+      <div><h2 class="font-display text-2xl text-teak mb-4">ทำความรู้จัก{guide.title}</h2><p class="text-ink/85 leading-loose">{guide.detail}</p></div>
       <figure><img src={imageSrc} alt={photo ? `ภาพสถานที่ ${guide.title}` : 'ภาพน้ำตกวชิรธารประกอบการวางแผน'} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl"/><figcaption class="text-sm text-ink/60 mt-2">{imageCaption}</figcaption></figure>
     </section>
     <section class="mb-12 grid md:grid-cols-2 gap-7">
